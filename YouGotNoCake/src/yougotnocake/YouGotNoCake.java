@@ -21,8 +21,8 @@ public class YouGotNoCake {
         
         playerOne.setFirstName("Mark");
         playerOne.setLastName("Smith");
-        playerOne.setGameID(24);
-        playerOne.setGameStatus("gameOn");
+        playerOne.setGameID(100);
+        playerOne.setGameStatus("gameOff");
         String playerInfo = playerOne.toString();
         System.out.println(playerInfo);
     }
