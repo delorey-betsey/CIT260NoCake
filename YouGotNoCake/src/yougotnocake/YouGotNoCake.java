@@ -19,8 +19,8 @@ public class YouGotNoCake {
     public static void main(String[] args) {
         Player playerOne = new Player();
         
-        playerOne.setFirstName("Thayne");
-        playerOne.setLastName("Peterson");
+        playerOne.setFirstName("Betsey");
+        playerOne.setLastName("Delorey");
         playerOne.setGameID(24);
         playerOne.setGameStatus("gameOn");
         String playerInfo = playerOne.toString();
