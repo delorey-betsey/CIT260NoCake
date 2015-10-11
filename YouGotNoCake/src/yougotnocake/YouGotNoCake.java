@@ -5,24 +5,41 @@
  */
 package yougotnocake;
 
+import byui.cit260.youGotNoCake.model.Albertsons;
+import byui.cit260.youGotNoCake.model.BYUILab;
+import byui.cit260.youGotNoCake.model.Backyard;
+import byui.cit260.youGotNoCake.model.Barbershop;
 import byui.cit260.youGotNoCake.model.CakeIngredients;
 import byui.cit260.youGotNoCake.model.CalcBMI;
 import byui.cit260.youGotNoCake.model.CalcGallons;
 import byui.cit260.youGotNoCake.model.CalcXmas;
 import byui.cit260.youGotNoCake.model.Calculations;
 import byui.cit260.youGotNoCake.model.CreepyHseL;
+import byui.cit260.youGotNoCake.model.DarkAlley;
+import byui.cit260.youGotNoCake.model.DollarTheater;
 import byui.cit260.youGotNoCake.model.DrRootsDentalL;
+import byui.cit260.youGotNoCake.model.FillingStation;
+import byui.cit260.youGotNoCake.model.Florist;
 import byui.cit260.youGotNoCake.model.Friends;
+import byui.cit260.youGotNoCake.model.Frontyard;
+import byui.cit260.youGotNoCake.model.Garage;
 import byui.cit260.youGotNoCake.model.GrandmasW;
+import byui.cit260.youGotNoCake.model.Library;
 import byui.cit260.youGotNoCake.model.Lists;
 import byui.cit260.youGotNoCake.model.Manhole;
 import byui.cit260.youGotNoCake.model.Map;
 import byui.cit260.youGotNoCake.model.Motel6W;
+import byui.cit260.youGotNoCake.model.Museum;
+import byui.cit260.youGotNoCake.model.Outhouse;
 import byui.cit260.youGotNoCake.model.PartySupplies;
 import byui.cit260.youGotNoCake.model.Player;
+import byui.cit260.youGotNoCake.model.Playground;
+import byui.cit260.youGotNoCake.model.PoliceStation;
 import byui.cit260.youGotNoCake.model.School;
+import byui.cit260.youGotNoCake.model.SkatePark;
 import byui.cit260.youGotNoCake.model.SleepAids;
 import byui.cit260.youGotNoCake.model.SovietBakeShopL;
+import byui.cit260.youGotNoCake.model.Treehouse;
 
 /**
  *
@@ -173,6 +190,119 @@ public class YouGotNoCake {
         calcGallonsOne.setResult(42);
         String calcGallonsInfo = calcGallonsOne.toString();
         System.out.println(calcGallonsInfo);
+        
+        Albertsons albertsonsOne = new Albertsons();
+        albertsonsOne.setLocationID(18);
+        albertsonsOne.setLocationText(listsInfo);
+        albertsonsOne.getItemSpumoni();
+        String albertsonsInfo = albertsonsOne.toString();
+        System.out.println(albertsonsInfo);
+        
+        BYUILab byuiLabOne = new BYUILab();
+        byuiLabOne.setLocationID(30);
+        byuiLabOne.setLocationText(listsInfo);
+        byuiLabOne.setItemGrimReaper(manholeInfo);
+        String byuiLabInfo = byuiLabOne.toString();
+        System.out.println(byuiLabInfo);
+        
+        Backyard backyardOne = new Backyard();
+        backyardOne.setLocationID(7);
+        backyardOne.setLicationText(listsInfo);
+        String backyardInfo = backyardOne.toString();
+        System.out.println(backyardInfo);
+        
+        Barbershop barbershopOne = new Barbershop();
+        barbershopOne.setLocationId(32);
+        barbershopOne.setLocationText(listsInfo);
+        String barbershopInfo = barbershopOne.toString();
+        System.out.println(barbershopInfo);
+        
+        DarkAlley darkAlleyOne = new DarkAlley();
+        darkAlleyOne.setLocationId(22);
+        darkAlleyOne.setLocationText(listsInfo);
+        darkAlleyOne.setItemTaxCode(mapInfo);
+        String darkalleyInfo = darkAlleyOne.toString();
+        System.out.println(darkalleyInfo);
+        
+        DollarTheater dollarTheaterOne = new DollarTheater();
+        dollarTheaterOne.setLocationID(64);
+        dollarTheaterOne.setLocationText(listsInfo);
+        dollarTheaterOne.setItemButta(motel6WInfo);
+        String dollarTheaterInfo = dollarTheaterOne.toString();
+        System.out.println(dollarTheaterOne);
+        
+        FillingStation fillingStationOne = new FillingStation();
+        fillingStationOne.setLocationID(45);
+        fillingStationOne.setLocationText(listsInfo);
+        fillingStationOne.setItemSugar(motel6WInfo);
+        String fillingStationInfo = fillingStationOne.toString();
+        System.out.println(fillingStationInfo);
+        
+        Florist floristOne = new  Florist();
+        floristOne.setLocationID(32);
+        floristOne.setLocationText(listsInfo);
+        floristOne.getItemFlour();
+        String floristInfo = floristOne.toString();
+        System.out.println(floristInfo);
+        
+        Frontyard frontyardOne = new Frontyard();
+        frontyardOne.setLocationID(61);
+        frontyardOne.setLocationText(listsInfo);
+        frontyardOne.setItemBananas(mapInfo);
+        String frontyardInfo = frontyardOne.toString();
+        System.out.println(frontyardInfo);
+        
+        Garage garageOne = new Garage();
+        garageOne.setLocationID(32);
+        garageOne.setLocationText(listsInfo);
+        garageOne.setItemApneaFairy(mapInfo);
+        String garageInfo = garageOne.toString();
+        System.out.println(garageInfo);
+        
+        Library libraryOne = new Library();
+        libraryOne.setLocationID(56);
+        libraryOne.setLocationText(listsInfo);
+        String libraryInfo = libraryOne.toString();
+        System.out.println(libraryInfo);
+        
+        Museum museumOne = new Museum();
+        museumOne.setLocationID(78);
+        museumOne.setLocationText(listsInfo);
+        String museumInfo = museumOne.toString();
+        System.out.println(museumInfo);
+        
+        Outhouse outhouseOne = new Outhouse();
+        outhouseOne.setLocationID(39);
+        outhouseOne.setLocationText(listsInfo);
+        outhouseOne.setItemWhoopie(museumInfo);
+        String outhouseInfo = outhouseOne.toString();
+        System.out.println(outhouseInfo);
+        
+        Playground playgroundOne = new Playground();
+        playgroundOne.setLocationID(65);
+        playgroundOne.setLocationText(listsInfo);
+        playgroundOne.setItemPlasticFork(floristInfo);
+        String playgroundInfo = playgroundOne.toString();
+        System.out.println(playgroundInfo);
+                
+        PoliceStation policeStationOne = new PoliceStation();
+        policeStationOne.setLocationID(34);
+        policeStationOne.setLocationText(listsInfo);
+        policeStationOne.setItemWharmMilk(museumInfo);
+        String policeStationInfo = policeStationOne.toString();
+        System.out.println(policeStationInfo);
+        
+        SkatePark skateParkOne = new SkatePark();
+        skateParkOne.setLocationID(84);
+        skateParkOne.setLocationText(listsInfo);
+        String skateParkInfo = skateParkOne.toString();
+        System.out.println(skateParkInfo);
+        
+        Treehouse treehouseOne = new Treehouse();
+        treehouseOne.setLocationID(32);
+        treehouseOne.setLocationText(listsInfo);
+        String treehouseInfo = treehouseOne.toString();
+        System.out.println(treehouseInfo);
     }
     
 }
