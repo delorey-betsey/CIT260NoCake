@@ -7,7 +7,31 @@ package byui.cit260.youGotNoCake.control;
 
 public class CalculationsControl {
     
-    public void calcXmas(todaysDay, todaysMonth, todaysYear, result, calculationType){
+   
+    public double calcGallons(double numFamilyMbrs) {
+         
+        if(numFamilyMbrs < 1 || numFamilyMbrs > 50){
+            return -1;
+        }
+        double FLUSHES_PER_PERSON = 5;
+        double GALLONS_PER_FLUSH = 3.5;
+        double result;
+        result = (double) (numFamilyMbrs * FLUSHES_PER_PERSON * GALLONS_PER_FLUSH);
+        return result;
+   }
+
+    public double calcBMI(double height, double weight){
+        
+       if(height < 48 || height > 96){
+            return -1;
+        }
+                
+        double result;
+        result = (double) (weight / Math.pow(height,2) * 703);
+        return result;
+    }
+    
+    public double calcXmas(double todaysDay, double todaysMonth, double todaysYear){
         
         if(todaysDay < 1 || todaysDay > 31){
             return -1;
@@ -18,28 +42,19 @@ public class CalculationsControl {
         if(todaysYear < 1 || todaysYear > 2015){
             return -1;
         }
-        int FLUSHES_PER_PERSON = 5;
-        int GALLONS_PER_FLUSH = 3.5;
-        int result = numFamilyMbers * FLUSHES_PER_PERSON * GALLONS_PER_FLUSH
-        return result;
-    }
-    public int calcBMI(input1, input2, result, calculationType){
+        double XMAS_2015_julian = 2457381.5;
+        double  todaysJulian;
         
-       if(numFamilyMbrs < 1 || numFamilyMembers > 50){
-            return -1;
-        }
-        int FLUSHES_PER_PERSON = 5;
-        int GALLONS_PER_FLUSH = 3.5;
-        int result = numFamilyMbers * FLUSHES_PER_PERSON * GALLONS_PER_FLUSH
-        return result; 
-    }
-    public int calcGallons(numFamilyMbers, result, calculationType) {
-        if(numFamilyMbrs < 1 || numFamilyMembers > 50){
-            return -1;
-        }
-        int FLUSHES_PER_PERSON = 5;
-        int GALLONS_PER_FLUSH = 3.5;
-        int result = numFamilyMbers * FLUSHES_PER_PERSON * GALLONS_PER_FLUSH
-        return result;
+        //Find today's Julian date
+        double a = todaysYear/100;
+        double b = a/4;
+        double c = 2 - a + b;
+        double e = 365.25 * (todaysYear + 4716);
+        double f = 30.6001 * (todaysMonth + 1);
+        todaysJulian = c + todaysDay + e + f - 1524.5;
+        
+        //Find days between today and Christmas
+        double daysToXmas = XMAS_2015_julian - todaysJulian;
+        return daysToXmas;
     }
 }
