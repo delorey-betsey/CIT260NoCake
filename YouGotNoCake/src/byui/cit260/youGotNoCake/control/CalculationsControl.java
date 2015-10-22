@@ -25,12 +25,17 @@ public class CalculationsControl {
        if(height < 48 || height > 96){
             return -1;
         }
+       {
+        
+       if(weight < 50 || weight > 500){
+            return -1;
+        }
                 
         double result;
         result = (double) (weight / Math.pow(height,2) * 703);
         return result;
     }
-    
+    }
     public double calcXmas(double todaysDay, double todaysMonth, double todaysYear){
         
         if(todaysDay < 1 || todaysDay > 31){

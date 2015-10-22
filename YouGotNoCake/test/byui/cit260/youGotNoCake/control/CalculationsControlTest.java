@@ -31,7 +31,7 @@ public class CalculationsControlTest {
      * Test of calcGallons method, of class CalculationsControl.
      */
     @Test
-    public void testCalcGallons() {
+    public void test1CalcGallons() {
         
         /****************************
          * * Test case #1 CalcGallons
@@ -57,13 +57,13 @@ public class CalculationsControlTest {
         
        }  
     @Test
-    public void testCalcBMI() {
+    public void test1CalcBMI() {
         
         /*************************
-         * * Test case #2 calcBMI
+         * * Test case #1 calcBMI
          * ***********************/
         System.out.println("calcBMI");
-        System.out.println("\tTest case #2");
+        System.out.println("\tTest case #1");
         
         // input values for test case 1
         double height = 72;
@@ -80,17 +80,71 @@ public class CalculationsControlTest {
         
         // compare expected return value with actual value returned
         // may need to search web-- JUnit JavaDoc Assert
-        assertEquals(expBMI, bmi, 0.1);
+        assertEquals(expBMI, bmi, 1.0);
         
        }  
     @Test
-    public void testCalcXmas() {
+    public void test2CalcBMI() {
         
         /*************************
-         * * Test case #3 CalcXmas
+         * * Test case #2 calcBMI
+         * ***********************/
+        System.out.println("calcBMI");
+        System.out.println("\tTest case #2");
+        
+        // input values for test case 1
+        double height = 60;
+        double weight = 200;
+                
+        // expected output return value
+        double expBMI = 39.05;
+                
+        //create instance of CalcGallons class
+        CalculationsControl instance = new CalculationsControl();
+        
+        // call function to run test
+        double bmi = instance.calcBMI(height,weight);
+        
+        // compare expected return value with actual value returned
+        // may need to search web-- JUnit JavaDoc Assert
+        assertEquals(expBMI, bmi, 1.0);
+        
+       }    
+    @Test
+    public void test4CalcBMI() {
+        
+        /*************************
+         * * Test case #4 calcBMI
+         * ***********************/
+        System.out.println("calcBMI");
+        System.out.println("\tTest case #4");
+        
+        // input values for test case 1
+        double height = 47;
+        double weight = 49;
+                
+        // expected output return value
+        double expBMI = 15.59;
+                
+        //create instance of CalcGallons class
+        CalculationsControl instance = new CalculationsControl();
+        
+        // call function to run test
+        double bmi = instance.calcBMI(height,weight);
+        
+        // compare expected return value with actual value returned
+        // may need to search web-- JUnit JavaDoc Assert
+        assertEquals(expBMI, bmi, 1.0);
+        
+       }  
+    @Test
+    public void test1CalcXmas() {
+        
+        /*************************
+         * * Test case #1 CalcXmas
          * ***********************/
         System.out.println("calcXmas");
-        System.out.println("\tTest case #3");
+        System.out.println("\tTest case #1");
         
         // input values for test case 1
         double todaysDay = 15;
