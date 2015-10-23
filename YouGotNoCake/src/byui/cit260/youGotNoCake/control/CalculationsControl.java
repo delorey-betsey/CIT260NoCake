@@ -36,15 +36,16 @@ public class CalculationsControl {
         return result;
     }
     }
+    
     public double calcXmas(double todaysDay, double todaysMonth, double todaysYear){
         
-        if(todaysDay < 1 || todaysDay > 31){
+        if(todaysDay <= 0 || todaysDay >= 32){
             return -1;
         }
-        if(todaysMonth < 1 || todaysMonth > 12){
+        if(todaysMonth <= 0 || todaysMonth >=13){
             return -1;
         }
-        if(todaysYear < 1 || todaysYear > 2015){
+        if(todaysYear <= 2014 || todaysYear >=2016){
             return -1;
         }
         double XMAS_2015_julian = 2457381.5;
