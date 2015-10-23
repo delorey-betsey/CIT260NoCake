@@ -118,10 +118,10 @@ public class CalculationsControlTest {
         System.out.println("\tTest case #4");
         
         // input values for test case 1
-        double numFamilyMbrs = aa;
+        double numFamilyMbrs = 0;
                 
         // expected output return value
-        double expGallons = error;
+        double expGallons = 0;
                 
         //create instance of CalcGallons class
         CalculationsControl instance = new CalculationsControl();
@@ -144,10 +144,10 @@ public class CalculationsControlTest {
         System.out.println("\tTest case #5");
         
         // input values for test case 1
-        double numFamilyMbrs = &@;
+        double numFamilyMbrs = 48;
                 
         // expected output return value
-        double expGallons = error;
+        double expGallons = 840;
                 
         //create instance of CalcGallons class
         CalculationsControl instance = new CalculationsControl();
@@ -170,10 +170,10 @@ public class CalculationsControlTest {
         System.out.println("\tTest case #6");
         
         // input values for test case 1
-        double numFamilyMbrs = null;
+        double numFamilyMbrs = 97;
                 
         // expected output return value
-        double expGallons = error;
+        double expGallons = 0;
                 
         //create instance of CalcGallons class
         CalculationsControl instance = new CalculationsControl();
