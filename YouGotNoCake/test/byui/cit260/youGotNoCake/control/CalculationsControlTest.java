@@ -610,7 +610,7 @@ public class CalculationsControlTest {
     public void test10CalcXmas() {
         
         /*************************
-         * * Test case #10 CalcXmas (invalid boundary)
+         * * Test case #10 CalcXmas (valid boundary in 2015 but after Christmas)
          * ***********************/
         System.out.println("calcXmas");
         System.out.println("\tTest case #10");
