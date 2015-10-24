@@ -30,9 +30,11 @@ public class CalculationsControl {
        if(weight < 50 || weight > 500){
             return -1;
         }
-                
+        
+        double BMI_MULTIPLIER = 703;
+        
         double result;
-        result = (double) (weight / Math.pow(height,2) * 703);
+        result = (double) (weight / Math.pow(height,2) * BMI_MULTIPLIER);
         return result;
     }
     }
@@ -45,7 +47,7 @@ public class CalculationsControl {
         if(todaysMonth <= 0 || todaysMonth >=13){
             return -1;
         }
-        if(todaysYear <= 2014 || todaysYear >=2016){
+        if(todaysYear != 2015){
             return -1;
         }
         double XMAS_2015_julian = 2457381.5;
@@ -61,6 +63,12 @@ public class CalculationsControl {
         
         //Find days between today and Christmas
         double daysToXmas = XMAS_2015_julian - todaysJulian;
+                
+        if (daysToXmas <=0) {
+            System.out.println("Silly, you missed it! Date after Christmas.");
+        } 
+        
         return daysToXmas;
+
     }
 }

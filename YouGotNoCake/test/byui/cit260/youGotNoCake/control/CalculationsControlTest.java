@@ -448,12 +448,12 @@ public class CalculationsControlTest {
         System.out.println("\tTest case #4");
         
         // input values for test case 1
-        double todaysDay = 00;
-        double todaysMonth = 00;
-        double todaysYear = 0000;
+        double todaysDay = 1;
+        double todaysMonth = 0; //left off 1 for 10 October
+        double todaysYear = 2015;
                 
         // expected output return value
-        double expDaysToXmas = 50;
+        double expDaysToXmas = 85;
                 
         //create instance of CalcGallons class
         CalculationsControl instance = new CalculationsControl();
@@ -470,18 +470,18 @@ public class CalculationsControlTest {
     public void test5CalcXmas() {
         
         /*************************
-         * * Test case #5 CalcXmas (valid boundary)
+         * * Test case #5 CalcXmas (invalid boundary)
          * ***********************/
         System.out.println("calcXmas");
         System.out.println("\tTest case #5");
         
         // input values for test case 1
-        double todaysDay = 10;
-        double todaysMonth = 2;
+        double todaysDay = 1;
+        double todaysMonth = 13; //meant 12 for December
         double todaysYear = 2015;
                 
         // expected output return value
-        double expDaysToXmas = 318;
+        double expDaysToXmas = 24;
                 
         //create instance of CalcGallons class
         CalculationsControl instance = new CalculationsControl();
@@ -504,12 +504,12 @@ public class CalculationsControlTest {
         System.out.println("\tTest case #6");
         
         // input values for test case 1
-        double todaysDay = 10;
-        double todaysMonth = 10;
-        double todaysYear = 3015;
+        double todaysDay = 0;  //meant 9th
+        double todaysMonth = 2;
+        double todaysYear = 2015;
                 
         // expected output return value
-        double expDaysToXmas = 76;
+        double expDaysToXmas = 319;
                 
         //create instance of CalcGallons class
         CalculationsControl instance = new CalculationsControl();
@@ -522,4 +522,116 @@ public class CalculationsControlTest {
         assertEquals(expDaysToXmas, daysToXmas, 3.0);
         
        }  
+    @Test
+    public void test7CalcXmas() {
+        
+        /*************************
+         * * Test case #7 CalcXmas (invalid boundary)
+         * ***********************/
+        System.out.println("calcXmas");
+        System.out.println("\tTest case #7");
+        
+        // input values for test case 1
+        double todaysDay = 32;  //no such day, meant 31
+        double todaysMonth = 3;
+        double todaysYear = 2015;
+                
+        // expected output return value
+        double expDaysToXmas = 269;
+                
+        //create instance of CalcGallons class
+        CalculationsControl instance = new CalculationsControl();
+        
+        // call function to run test
+        double daysToXmas = instance.calcXmas(todaysDay,todaysMonth, todaysYear);
+        
+        // compare expected return value with actual value returned
+        // may need to search web-- JUnit JavaDoc Assert
+        assertEquals(expDaysToXmas, daysToXmas, 3.0);
+        
+       }  
+    @Test
+    public void test8CalcXmas() {
+        
+        /*************************
+         * * Test case #8 CalcXmas (valid boundary)
+         * ***********************/
+        System.out.println("calcXmas");
+        System.out.println("\tTest case #8");
+        
+        // input values for test case 1
+        double todaysDay = 31;
+        double todaysMonth = 12;
+        double todaysYear = 2014;  //only calculating for 2015 or before
+                
+        // expected output return value
+        double expDaysToXmas = 359;
+                
+        //create instance of CalcGallons class
+        CalculationsControl instance = new CalculationsControl();
+        
+        // call function to run test
+        double daysToXmas = instance.calcXmas(todaysDay,todaysMonth, todaysYear);
+        
+        // compare expected return value with actual value returned
+        // may need to search web-- JUnit JavaDoc Assert
+        assertEquals(expDaysToXmas, daysToXmas, 3.0);
+        
+       }  
+    @Test
+    public void test9CalcXmas() {
+        
+        /*************************
+         * * Test case #9 CalcXmas (invalid boundary)
+         * ***********************/
+        System.out.println("calcXmas");
+        System.out.println("\tTest case #9");
+        
+        // input values for test case 1
+        double todaysDay = 7;
+        double todaysMonth = 10;
+        double todaysYear = 3015;
+                
+        // expected output return value
+        double expDaysToXmas = 365164;
+                
+        //create instance of CalcGallons class
+        CalculationsControl instance = new CalculationsControl();
+        
+        // call function to run test
+        double daysToXmas = instance.calcXmas(todaysDay,todaysMonth, todaysYear);
+        
+        // compare expected return value with actual value returned
+        // may need to search web-- JUnit JavaDoc Assert
+        assertEquals(expDaysToXmas, daysToXmas, 3.0);
+        
+       }  
+      @Test
+    public void test10CalcXmas() {
+        
+        /*************************
+         * * Test case #10 CalcXmas (invalid boundary)
+         * ***********************/
+        System.out.println("calcXmas");
+        System.out.println("\tTest case #10");
+        
+        // input values for test case 1
+        double todaysDay = 28;
+        double todaysMonth = 12;
+        double todaysYear = 2015;
+                
+        // expected output return value
+        double expDaysToXmas = -4;
+                
+        //create instance of CalcGallons class
+        CalculationsControl instance = new CalculationsControl();
+        
+        // call function to run test
+        double daysToXmas = instance.calcXmas(todaysDay,todaysMonth, todaysYear);
+        
+        // compare expected return value with actual value returned
+        // may need to search web-- JUnit JavaDoc Assert
+        assertEquals(expDaysToXmas, daysToXmas, 3.0);
+        
+       } 
 }
