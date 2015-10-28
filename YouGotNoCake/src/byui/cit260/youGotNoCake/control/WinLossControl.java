@@ -6,10 +6,10 @@
 package byui.cit260.youGotNoCake.control;
 
 public class WinLossControl {
-    public void loadWin(locationID, locationText, gameStatus){
+    public void loadWin(double locationID, char locationText, char gameStatus){
       
     }
-    public void loadLoss(locationID, locationText, gameStatus){
+    public void loadLoss(double locationID, char locationText, char gameStatus){
         
     }
 }

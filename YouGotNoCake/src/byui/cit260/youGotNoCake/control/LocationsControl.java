@@ -6,19 +6,22 @@
 package byui.cit260.youGotNoCake.control;
 
 public class LocationsControl {
-    public void receivePlayerChoice(locationID){
+    public void receivePlayerChoice( double locationID){
         
     }
-    public void loadLocation(locationID, locationText, actionFlag){
+    public void loadLocation(double locationID, char locationText, char actionFlag){
         
     }
-    public int evalActionFlag(actionFlag, locationID){
+    public int evalActionFlag(char actionFlag, double locationID){
+        return 0;
         
     }
-    public int storeItem(listName, itemName, foundFlag){
+    public int storeItem(char listName, char itemName, char foundFlag){
+        return 0;
         
     }
-    public int setVisitedFlag(locationID, visitedFlag){
+    public int setVisitedFlag(double locationID, char visitedFlag){
+        return 0;
         
     }
 }
