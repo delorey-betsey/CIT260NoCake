@@ -6,13 +6,13 @@
 package byui.cit260.youGotNoCake.control;
 
 public class ListsControl {
-    public int countItemsFound(listName, itemName, foundFlag, numItemsFound){
-        
+    public double countItemsFound(char listName,char itemName,char foundFlag,double numItemsFound){
+        return 0;
     }
-    public string returnListStatus(numItemsFound, listStatusMsg, gameStatus){
-        
+    public double returnListStatus(double numItemsFound,char listStatusMsg,char gameStatus){
+        return 0;
     }
-    public void loadListWin(locationID, locationText, gameStatus){
-        
+    public double loadListWin(double locationID,char locationText,double gameStatus){
+        return 0;
     }
 }

@@ -5,22 +5,24 @@
  */
 package byui.cit260.youGotNoCake.control;
 
-public class GameControl {
-    public void startGame(firstName, lastName, gameID, gameStatus){
-        
-    }
-    public int continueGame(locationID){
+public class GameControl {    
     
+    public double startGame(char firstName,
+                            char lastName,
+                            double gameID,
+                            char gameStatus){
+        return 0;    
     }
-    public int quitGame(gameStatus){
-        
+    public double continueGame(double locationID){
+        return 0;     
     }
-    public string saveGame(firstName, lastName, gameID, gameStatus){
-        
+    public char quitGame(char gameStatus){
+        return 0; 
     }
-    public void restartGame(firstName, lastName, gameID, gameStatus){
-        
+    public double saveGame(char firstName, char lastName, double gameID, char gameStatus){
+        return 0;
     }
-    
+    public double restartGame(char firstName, char lastName,double gameID,char gameStatus){
+        return 0;
+    }
 }
-
