@@ -148,5 +148,3 @@ public class GameControlTest {
         assertEquals(expResult, result, 0.0);
     }
 }
-
-
