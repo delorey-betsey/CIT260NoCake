@@ -6,12 +6,6 @@
 package byui.cit260.youGotNoCake.control;
 
 public class WinLossControl {
-<<<<<<< HEAD
-    public void loadWin(double locationID, char locationText, char gameStatus){
-      
-    }
-    public void loadLoss(double locationID, char locationText, char gameStatus){
-=======
     
     public double loadWin(double locationID, 
                           double gameStatus){
@@ -43,7 +37,6 @@ public class WinLossControl {
             // do nothing for now
         }
         char locationText;
->>>>>>> origin/master
         
         double result = 0;
         return result;
