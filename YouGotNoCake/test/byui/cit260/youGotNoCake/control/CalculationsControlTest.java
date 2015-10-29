@@ -29,8 +29,7 @@ public class CalculationsControlTest {
 
     /**
      * Test of calcGallons method, of class CalculationsControl.
-     */
-       
+     */  
     @Test
     public void test1CalcGallons() {
         

@@ -7,22 +7,66 @@ package byui.cit260.youGotNoCake.control;
 
 public class GameControl {    
     
-    public double startGame(char firstName,
-                            char lastName,
-                            double gameID,
-                            char gameStatus){
-        return 0;    
-    }
+    public double startGame(double gameID){
+        
+        if (gameID <=0){
+            return -1;
+        } else {
+            // do nothing for now
+        }
+        char firstName;
+        char lastName;
+        char gameStatus;
+        
+        double result = 0;
+        return result;
+    }  
+    public double restartGame(double gameID){
+       
+        if (gameID <=0){
+            return -1;
+        } else {
+            // do nothing for now
+        }
+        char firstName;
+        char lastName;
+        char gameStatus;
+        
+        double result = 0;
+        return result;
+    }  
+    public double saveGame(double gameID){
+       
+        if (gameID <=0){
+            return -1;
+        } else {
+            // do nothing for now
+        }
+        char firstName;
+        char lastName;
+        char gameStatus;
+        
+        double result = 0;
+        return result;
+    }  
     public double continueGame(double locationID){
-        return 0;     
+
+    if (locationID <=0){
+        return -1;
+    } else {
+        // do nothing for now
     }
-    public char quitGame(char gameStatus){
-        return 0; 
-    }
-    public double saveGame(char firstName, char lastName, double gameID, char gameStatus){
-        return 0;
-    }
-    public double restartGame(char firstName, char lastName,double gameID,char gameStatus){
-        return 0;
-    }
+    double result = 0;
+    return result;
 }
+    public double quitGame(double gameStatus){
+        
+    if (gameStatus <=0){
+            return -1;
+        } else {
+            // do nothing for now
+        }
+        double result = 0;
+        return result;
+    }
+} 
