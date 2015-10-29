@@ -6,8 +6,7 @@
 package byui.cit260.youGotNoCake.control;
 
 public class CalculationsControl {
-    
-   
+      
     public double calcGallons(double numFamilyMbrs) {
          
         if(numFamilyMbrs < 1 || numFamilyMbrs > 50){
