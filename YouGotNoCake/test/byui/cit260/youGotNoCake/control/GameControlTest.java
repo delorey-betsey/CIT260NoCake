@@ -43,6 +43,9 @@ public class GameControlTest {
         // compare expected return value with actual value returned
         assertEquals(expResult, result, 0.0);
     }
+        /**
+     * Test of restartGame method, of class GameControl.
+     */
     @Test
     public void testRestartGame() {
     /****************************
@@ -66,6 +69,9 @@ public class GameControlTest {
     // compare expected return value with actual value returned
     assertEquals(expResult, result, 0.0);
 }
+        /**
+     * Test of saveGame method, of class GameControl.
+     */
     @Test
     public void testSaveGame() {
     /****************************
@@ -89,6 +95,9 @@ public class GameControlTest {
     // compare expected return value with actual value returned
     assertEquals(expResult, result, 0.0);
     }
+        /**
+     * Test of continueGame method, of class GameControl.
+     */
     @Test
     public void testContinueGame() {
         /****************************
@@ -112,6 +121,9 @@ public class GameControlTest {
         // compare expected return value with actual value returned
         assertEquals(expResult, result, 0.0);
     }
+    /**
+     * Test of quitGame method, of class GameControl.
+     */
     @Test
     public void testQuitGame() {
             /****************************

@@ -6,10 +6,39 @@
 package byui.cit260.youGotNoCake.control;
 
 public class WinLossControl {
-    public void loadWin(locationID, locationText, gameStatus){
-      
-    }
-    public void loadLoss(locationID, locationText, gameStatus){
+    
+    public double loadWin(double locationID, 
+                          double gameStatus){
+        if (locationID <=0){
+            return -1;
+        } else {
+            // do nothing for now
+        }
+        if (gameStatus <=0){
+            return -1;
+        } else {
+            // do nothing for now
+        }
+        char locationText;
         
+        double result = 0;
+        return result;
+    }  
+    public double loadLoss(double locationID, 
+                           double gameStatus){
+        if (locationID <=0){
+            return -1;
+        } else {
+            // do nothing for now
+        }
+        if (gameStatus <=0){
+            return -1;
+        } else {
+            // do nothing for now
+        }
+        char locationText;
+        
+        double result = 0;
+        return result;
+    }  
     }
-}

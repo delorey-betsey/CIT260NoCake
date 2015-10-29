@@ -6,19 +6,65 @@
 package byui.cit260.youGotNoCake.control;
 
 public class LocationsControl {
-    public void receivePlayerChoice(locationID){
-        
+    public double receivePlayerChoice(double locationID){
+        if (locationID <=0){
+            return -1;
+        } else {
+            // do nothing for now
+        }
+              
+        double result = 0;
+        return result;
     }
-    public void loadLocation(locationID, locationText, actionFlag){
+    public double loadLocation(double locationID){
+        if (locationID <=0){
+            return -1;
+        } else {
+            // do nothing for now
+        }
+        char locationText;
+        char actionFlag;
         
+        double result = 0;
+        return result;
     }
-    public int evalActionFlag(actionFlag, locationID){
+    public double evalActionFlag(double locationID){
+        if (locationID <=0){
+            return -1;
+        } else {
+            // do nothing for now
+        }
+        char actionFlag;
         
+        double result = 0;
+        return result;
     }
-    public int storeItem(listName, itemName, foundFlag){
+    public double storeItem(double foundFlag){
+        if (foundFlag <=0){
+            return -1;
+        } else {
+            // do nothing for now
+        }
+        char itemName;
+        char listName;
         
+        double result = 0;
+        return result;
     }
-    public int setVisitedFlag(locationID, visitedFlag){
+    public double setVisitedFlag(double locationID, 
+                                 double visitedFlag){
+        if (locationID <=0){
+            return -1;
+        } else {
+            // do nothing for now
+        }
+        if (visitedFlag <=0){
+            return -1;
+        } else {
+            // do nothing for now
+        }
         
+        double result = 0;
+        return result;
     }
-}
+    }
