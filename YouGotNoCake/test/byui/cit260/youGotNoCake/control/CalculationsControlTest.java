@@ -122,7 +122,7 @@ public class CalculationsControlTest {
         double numFamilyMbrs = 0;
                 
         // expected output return value
-        double expGallons = 0;
+        double expGallons = -1;
                 
         //create instance of CalcGallons class
         CalculationsControl instance = new CalculationsControl();
@@ -174,7 +174,7 @@ public class CalculationsControlTest {
         double numFamilyMbrs = 97;
                 
         // expected output return value
-        double expGallons = 0;
+        double expGallons = -1;
                 
         //create instance of CalcGallons class
         CalculationsControl instance = new CalculationsControl();
@@ -285,7 +285,7 @@ public class CalculationsControlTest {
         double weight = 49;
                 
         // expected output return value
-        double expBMI = 15.59;
+        double expBMI = -1;
                 
         //create instance of CalcGallons class
         CalculationsControl instance = new CalculationsControl();
@@ -338,7 +338,7 @@ public class CalculationsControlTest {
         double weight = 501;
                 
         // expected output return value
-        double expBMI = 37.4;
+        double expBMI = -1;
                 
         //create instance of CalcGallons class
         CalculationsControl instance = new CalculationsControl();
@@ -453,7 +453,7 @@ public class CalculationsControlTest {
         double todaysYear = 2015;
                 
         // expected output return value
-        double expDaysToXmas = 85;
+        double expDaysToXmas = -1;
                 
         //create instance of CalcGallons class
         CalculationsControl instance = new CalculationsControl();
@@ -481,7 +481,7 @@ public class CalculationsControlTest {
         double todaysYear = 2015;
                 
         // expected output return value
-        double expDaysToXmas = 24;
+        double expDaysToXmas = -1;
                 
         //create instance of CalcGallons class
         CalculationsControl instance = new CalculationsControl();
@@ -509,7 +509,7 @@ public class CalculationsControlTest {
         double todaysYear = 2015;
                 
         // expected output return value
-        double expDaysToXmas = 319;
+        double expDaysToXmas = -1;
                 
         //create instance of CalcGallons class
         CalculationsControl instance = new CalculationsControl();
@@ -537,7 +537,7 @@ public class CalculationsControlTest {
         double todaysYear = 2015;
                 
         // expected output return value
-        double expDaysToXmas = 269;
+        double expDaysToXmas = -1;
                 
         //create instance of CalcGallons class
         CalculationsControl instance = new CalculationsControl();
@@ -565,7 +565,7 @@ public class CalculationsControlTest {
         double todaysYear = 2014;  //only calculating for 2015 or before
                 
         // expected output return value
-        double expDaysToXmas = 359;
+        double expDaysToXmas = -1;
                 
         //create instance of CalcGallons class
         CalculationsControl instance = new CalculationsControl();
@@ -593,7 +593,7 @@ public class CalculationsControlTest {
         double todaysYear = 3015;
                 
         // expected output return value
-        double expDaysToXmas = 365164;
+        double expDaysToXmas = -1;
                 
         //create instance of CalcGallons class
         CalculationsControl instance = new CalculationsControl();
