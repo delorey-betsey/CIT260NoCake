@@ -38,7 +38,7 @@ public class GameControlTest {
         ProgramControl instance = new ProgramControl();
         
         // call function to run test
-        double result = instance.startGame(gameID);
+        double result = instance.createPlayer(gameID);
         
         // compare expected return value with actual value returned
         assertEquals(expResult, result, 0.0);
@@ -64,7 +64,7 @@ public class GameControlTest {
     ProgramControl instance = new ProgramControl();
 
     // call function to run test
-    double result = instance.startGame(gameID);
+    double result = instance.createPlayer(gameID);
 
     // compare expected return value with actual value returned
     assertEquals(expResult, result, 0.0);
@@ -90,7 +90,7 @@ public class GameControlTest {
     ProgramControl instance = new ProgramControl();
 
     // call function to run test
-    double result = instance.startGame(gameID);
+    double result = instance.createPlayer(gameID);
 
     // compare expected return value with actual value returned
     assertEquals(expResult, result, 0.0);
@@ -116,7 +116,7 @@ public class GameControlTest {
         ProgramControl instance = new ProgramControl();
         
         // call function to run test
-        double result = instance.startGame(locationID);
+        double result = instance.createPlayer(locationID);
         
         // compare expected return value with actual value returned
         assertEquals(expResult, result, 0.0);
@@ -142,7 +142,7 @@ public class GameControlTest {
         ProgramControl instance = new ProgramControl();
         
         // call function to run test
-        double result = instance.startGame(gameStatus);
+        double result = instance.createPlayer(gameStatus);
         
         // compare expected return value with actual value returned
         assertEquals(expResult, result, 0.0);
