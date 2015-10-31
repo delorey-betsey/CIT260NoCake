@@ -11,9 +11,8 @@ import byui.cit260.youGotNoCake.model.Player;
  *
  * @author Betsey
  */
-public class GameControl {
-
-    public static void createNewGame(Player player) {
-        System.out.println("\n*** createNewGame stub function called ***");
-    }
+public class HelpControl {
+    static void displayHelpMenu(Player player) {
+        System.out.println("\n*** displayHelpMenu stub function called ***");}
+    
 }

@@ -14,33 +14,22 @@ import java.util.Objects;
  */
 public class Player implements Serializable{ 
     //class-instance variables
-    private String firstName;
-    private String lastName;
+    private String name;
     private Number gameID;
     private String gameStatus;
 
     public Player() {
-    }
-
+    }  
     
-    
-    public String getFirstName() {
-        return firstName;
+    public String getName() {
+        return name;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public Number getGameID() {
+     public Number getGameID() {
         return gameID;
     }
 
@@ -58,14 +47,13 @@ public class Player implements Serializable{
 
     @Override
     public String toString() {
-        return "Player{" + "firstName=" + firstName + ", lastName=" + lastName + ", gameID=" + gameID + ", gameStatus=" + gameStatus + '}';
+        return "Player{" + "name=" + name + ", gameID=" + gameID + ", gameStatus=" + gameStatus + '}';
     }
 
     @Override
     public int hashCode() {
         int hash = 5;
-        hash = 37 * hash + Objects.hashCode(this.firstName);
-        hash = 37 * hash + Objects.hashCode(this.lastName);
+        hash = 37 * hash + Objects.hashCode(this.name);
         hash = 37 * hash + Objects.hashCode(this.gameID);
         hash = 37 * hash + Objects.hashCode(this.gameStatus);
         return hash;
@@ -80,21 +68,14 @@ public class Player implements Serializable{
             return false;
         }
         final Player other = (Player) obj;
-        if (!Objects.equals(this.firstName, other.firstName)) {
-            return false;
-        }
-        if (!Objects.equals(this.lastName, other.lastName)) {
+        if (!Objects.equals(this.name, other.name)) {
             return false;
         }
         if (!Objects.equals(this.gameID, other.gameID)) {
             return false;
         }
-        if (!Objects.equals(this.gameStatus, other.gameStatus)) {
-            return false;
-        }
+
         return true;
     }
-    
-    
-    
+
 }

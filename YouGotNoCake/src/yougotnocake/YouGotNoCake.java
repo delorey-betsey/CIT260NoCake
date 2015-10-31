@@ -52,8 +52,7 @@ public class YouGotNoCake {
      */
     public static void main(String[] args) {
         Player playerOne = new Player();
-        playerOne.setFirstName("Mark");
-        playerOne.setLastName("Smith");
+        playerOne.setName("Mark");
         playerOne.setGameID(100);
         playerOne.setGameStatus("gameOff"); 
         String playerInfo = playerOne.toString();
