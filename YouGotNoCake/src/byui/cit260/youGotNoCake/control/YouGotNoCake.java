@@ -4,19 +4,43 @@
  * and open the template in the editor.
  */
 package byui.cit260.youGotNoCake.control;
-
+import byui.cit260.youGotNoCake.model.Player;
 import byui.cit260.youGotNoCake.view.StartProgramView;
+
 
 /**
  *
  * @author Betsey
  */
+<<<<<<< HEAD
 public class YouGotNoCake {
     private static Object startProgramView;
      
+=======
+public class YouGotNoCake {  
+    
+    private static Game currentGame = null;
+    private static Player player = null;
+
+>>>>>>> origin/master
     public static void main(String[] args){
+        
         //create Start ProgramView and start the program
-        StartProgramView startProgamView = new StartProgramView();
+        StartProgramView startProgramView 
+                                 = new StartProgramView();
         startProgramView.startProgram();
+        }
+
+        public static Game getCurrentGame(){
+            return currentGame;
+        }
+        public static void setCurrentGame(Game currentGame) {
+            YouGotNoCake.currentGame = currentGame;
+        }
+        public static Player getPlayer(){
+            return player;
+        }
+        public static void setPlayer(Player player){
+            YouGotNoCake.player = player;
+        }
     }
-}

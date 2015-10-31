@@ -18,7 +18,7 @@ public class GameControlTest {
     }
 
     /**
-     * Test of startGame method, of class GameControl.
+     * Test of startGame method, of class ProgramControl.
      */
     @Test
     public void testStartGame() {
@@ -35,7 +35,7 @@ public class GameControlTest {
         double expResult = -1;
         
         //create instance of CalcGallons class
-        GameControl instance = new GameControl();
+        ProgramControl instance = new ProgramControl();
         
         // call function to run test
         double result = instance.startGame(gameID);
@@ -44,7 +44,7 @@ public class GameControlTest {
         assertEquals(expResult, result, 0.0);
     }
         /**
-     * Test of restartGame method, of class GameControl.
+     * Test of restartGame method, of class ProgramControl.
      */
     @Test
     public void testRestartGame() {
@@ -61,7 +61,7 @@ public class GameControlTest {
     double expResult = -1;
 
     //create instance of CalcGallons class
-    GameControl instance = new GameControl();
+    ProgramControl instance = new ProgramControl();
 
     // call function to run test
     double result = instance.startGame(gameID);
@@ -70,7 +70,7 @@ public class GameControlTest {
     assertEquals(expResult, result, 0.0);
 }
         /**
-     * Test of saveGame method, of class GameControl.
+     * Test of saveGame method, of class ProgramControl.
      */
     @Test
     public void testSaveGame() {
@@ -87,7 +87,7 @@ public class GameControlTest {
     double expResult = -1;
 
     //create instance of CalcGallons class
-    GameControl instance = new GameControl();
+    ProgramControl instance = new ProgramControl();
 
     // call function to run test
     double result = instance.startGame(gameID);
@@ -96,7 +96,7 @@ public class GameControlTest {
     assertEquals(expResult, result, 0.0);
     }
         /**
-     * Test of continueGame method, of class GameControl.
+     * Test of continueGame method, of class ProgramControl.
      */
     @Test
     public void testContinueGame() {
@@ -113,7 +113,7 @@ public class GameControlTest {
         double expResult = -1;
         
         //create instance of ContinueGame class
-        GameControl instance = new GameControl();
+        ProgramControl instance = new ProgramControl();
         
         // call function to run test
         double result = instance.startGame(locationID);
@@ -122,7 +122,7 @@ public class GameControlTest {
         assertEquals(expResult, result, 0.0);
     }
     /**
-     * Test of quitGame method, of class GameControl.
+     * Test of quitGame method, of class ProgramControl.
      */
     @Test
     public void testQuitGame() {
@@ -139,7 +139,7 @@ public class GameControlTest {
         double expResult = -1;
         
         //create instance of ContinueGame class
-        GameControl instance = new GameControl();
+        ProgramControl instance = new ProgramControl();
         
         // call function to run test
         double result = instance.startGame(gameStatus);
