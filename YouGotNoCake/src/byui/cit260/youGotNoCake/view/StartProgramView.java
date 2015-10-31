@@ -5,6 +5,9 @@
  */
 package byui.cit260.youGotNoCake.view;
 
+import byui.cit260.youGotNoCake.control.ProgramControl;
+import byui.cit260.youGotNoCake.model.Player;
+
 /**
  *
  * @author Betsey
@@ -17,7 +20,9 @@ public class StartProgramView {
         //Display the banner screen
         this.displayBanner();
         //prompt the player to enter their name Retrieve the name of the player
+        String playersName = this.getPlayersName();
         //Create and save the player object
+        Player player = ProgramControl.createPlayer(playersName);
         //Display a personalized welcome message
         //Display the Main menu.
         
@@ -33,5 +38,9 @@ public class StartProgramView {
         
         System.out.println("*\n ************************* *");
         
+    }
+
+    private String getPlayersName() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

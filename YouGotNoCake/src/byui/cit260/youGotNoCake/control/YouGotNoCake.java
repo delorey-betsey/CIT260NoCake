@@ -12,6 +12,7 @@ import byui.cit260.youGotNoCake.view.StartProgramView;
  * @author Betsey
  */
 public class YouGotNoCake {
+    private static Object startProgramView;
      
     public static void main(String[] args){
         //create Start ProgramView and start the program
