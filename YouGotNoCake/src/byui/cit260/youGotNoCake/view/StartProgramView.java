@@ -8,16 +8,6 @@ import byui.cit260.youGotNoCake.control.ProgramControl;
 import byui.cit260.youGotNoCake.model.Player;
 import java.util.Scanner;
 
-<<<<<<< HEAD
-import byui.cit260.youGotNoCake.control.ProgramControl;
-import byui.cit260.youGotNoCake.model.Player;
-
-/**
- *
- * @author Betsey
- */
-=======
->>>>>>> origin/master
 public class StartProgramView {
     
     public StartProgramView() {
@@ -29,15 +19,10 @@ public class StartProgramView {
         
         //prompt the player to enter their name Retrieve the name of the player
         String playersName = this.getPlayersName();
-<<<<<<< HEAD
-        //Create and save the player object
-        Player player = ProgramControl.createPlayer(playersName);
-=======
         
         //Create and save the player object
         Player player = ProgramControl.createPlayer(playersName);
         
->>>>>>> origin/master
         //Display a personalized welcome message
         this.displayWelcomeMessage(player);
         
@@ -92,9 +77,5 @@ public class StartProgramView {
         System.out.println("\tWe hope you have a lot of fun!");
         
         System.out.println("========================================");        
-    }
-
-    private String getPlayersName() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

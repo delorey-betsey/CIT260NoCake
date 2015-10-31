@@ -12,17 +12,11 @@ import byui.cit260.youGotNoCake.view.StartProgramView;
  *
  * @author Betsey
  */
-<<<<<<< HEAD
-public class YouGotNoCake {
-    private static Object startProgramView;
-     
-=======
 public class YouGotNoCake {  
     
     private static Game currentGame = null;
     private static Player player = null;
 
->>>>>>> origin/master
     public static void main(String[] args){
         
         //create Start ProgramView and start the program
