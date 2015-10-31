@@ -10,15 +10,20 @@ import byui.cit260.youGotNoCake.model.Player;
 public class ProgramControl {    
 
     public static Player createPlayer(String name) {
-        
+
         if (name == null) {
             return null;
         }
         Player player = new Player();
         player.setName(name);
-        
+
         YouGotNoCake.setPlayer(player);  //save the player
-        
+
         return player;
     }
+
+    double  createNewGame(double gameID) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
+  
