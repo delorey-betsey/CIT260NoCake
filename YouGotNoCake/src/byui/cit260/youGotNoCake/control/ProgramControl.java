@@ -6,6 +6,7 @@
 package byui.cit260.youGotNoCake.control;
 
 import byui.cit260.youGotNoCake.model.Player;
+import static byui.cit260.youGotNoCake.view.StartProgramView.setPlayer;
 
 public class ProgramControl {    
 
@@ -17,7 +18,7 @@ public class ProgramControl {
         Player player = new Player();
         player.setName(name);
 
-        YouGotNoCake.setPlayer(player);  //save the player
+        setPlayer(player);  //save the player
 
         return player;
     }

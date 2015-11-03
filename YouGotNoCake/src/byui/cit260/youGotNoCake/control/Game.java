@@ -9,6 +9,6 @@ package byui.cit260.youGotNoCake.control;
  *
  * @author Betsey
  */
-class Game {
+public class Game {
     
 }

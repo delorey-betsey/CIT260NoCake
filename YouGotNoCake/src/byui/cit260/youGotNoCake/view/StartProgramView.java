@@ -4,11 +4,18 @@
  * and open the template in the editor.
  */
 package byui.cit260.youGotNoCake.view;
+import byui.cit260.youGotNoCake.control.GameControl;
+import byui.cit260.youGotNoCake.control.Game;
+import byui.cit260.youGotNoCake.model.Player;
 import byui.cit260.youGotNoCake.control.ProgramControl;
 import byui.cit260.youGotNoCake.model.Player;
 import java.util.Scanner;
 
+
 public class StartProgramView {
+    
+    private static Game currentGame = null;
+    private static Player player = null;
     
     public StartProgramView() {
     }
@@ -34,11 +41,63 @@ public class StartProgramView {
     }
     public void displayBanner() {
         //To change body of generated methods, choose Tools | Templates.
-        System.out.println("*\n Game description and how to play. *");
+        System.out.println("*\n GAME DESCRIPTION AND HOW TO PLAY-- ");
         
-        System.out.println("*\n This is a test. *");
+        System.out.println("*\nImagine you wake up in a closet. When you open"       
+                + "\nthe closet, you find that there was a birthday party,"
+                + "\nbut now everyone is gone.  All that remains are limp balloons"
+                + "\nhanging from the rafters, crushed confetti on"
+                + "\nthe floor and paper party plates with telltale cake crumbs."
+                + "\nNaturally, you check to see if there is any cake left,"   
+                + "\nbut to your displeasure, there is none. "); 
         
-        System.out.println("*\n This is a test. *");
+        System.out.println("*\n Now all you can think about is cake.  You are on"
+                + "\n a mission to find cake.  You are in a house but you know there "
+                + "\nis no cake here.  You discover the house is in some questionable "
+                + "\nneighborhood. You think about how handy a plastic fork and a "
+                + "\ntoy bat would be right about now.  And you begin to roam through "
+                + "\nthe town, trying to survive your quest to find some cake. ");
+        
+        System.out.println("*\n Along your way, the game will offer to calculate "
+                + "\nyour BMI, calculate the days until Christmas, and calculate "
+                + "\nthe gallons of water your household flushes each day, all based "
+                + "\nupon player input. As you are going around town, you figure, "
+                + "\nwhy not shop?  You are mad about shopping.  You want to find "
+                + "\nthings to make a cake, things for a birthday party and a variety "
+                + "\nof sleep aids.  You haven’t been sleeping well lately, obviously, "
+                + "\nwaking up in a closet.*");
+        
+        System.out.println("*\n Cake ingredients:\n" 
+                +"a.	Flour\n" 
+                +"b.	Sugar\n" 
+                +"c.	Butta\n" 
+                +"d.	Bananas ");
+        
+        System.out.println("*\n .  Birthday party supply list:\n" 
+                +"a.	Whoopie cushion\n" 
+                +"b.	5 gallons of ice cream\n" 
+                +"c.	Grim reaper\n" 
+                +"d.	Plastic forks ");
+        
+        System.out.println("*\n .  Sleep-aids:\n" 
+                +"a.	Apnea Fairy\n" 
+                +"b.	Tranquilizer dart\n" 
+                +"c.	Tax code\n" 
+                +"d.	Warm milk ");
+        
+        System.out.println("*\n The object of the game is to find cake.  You can "
+                + "\nget lucky and find cake in two of the 25 locations in the town.  "
+                + "\nAutomatic win.  Otherwise, you can win if you find all four "
+                + "\nitems on any of the three lists.  Twelve of the 25 locations "
+                + "\nhave various items on the player’s shopping lists.  This too "
+                + "\nresults in automatically winning the grand cake prize…and your "
+                + "\ngame is over. *");
+        
+        System.out.println("*\n There will be various twists and turns in the "
+                + "\nneighborhood that looks like any other, but definitely is not. "
+                + "\nYou may encounter pretty weird characters. The Big Question is—"
+                + "\nWill you find cake before you meet an untimely end?   You may "
+                + "\nor may not find cake, but you WILL have fun. *");
         
         System.out.println("*\n ************************* *");        
     }
@@ -78,4 +137,26 @@ public class StartProgramView {
         
         System.out.println("========================================");        
     }
+   
+
+////    public static void main(String[] args){
+//        
+//        //create Start ProgramView and start the program
+//        StartProgramView startProgramView 
+//                                 = new StartProgramView();
+//        startProgramView.startProgram();
+//        }
+
+        public static Game getCurrentGame(){
+            return currentGame;
+        }
+        public static void setCurrentGame(Game currentGame) {
+            StartProgramView.currentGame = currentGame;
+        }
+        public static Player getPlayer(){
+            return player;
+        }
+        public static void setPlayer(Player player){
+            StartProgramView.player = player;
+        }
 }

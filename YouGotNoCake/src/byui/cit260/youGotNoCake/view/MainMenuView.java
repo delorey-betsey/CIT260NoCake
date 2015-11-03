@@ -4,10 +4,10 @@
  * and open the template in the editor.
  */
 package byui.cit260.youGotNoCake.view;
-
+//import byui.cit260.youGotNoCake.view.StartProgramView;
 import byui.cit260.youGotNoCake.control.GameControl;
-import byui.cit260.youGotNoCake.control.HelpControl;
-import byui.cit260.youGotNoCake.control.YouGotNoCake;
+//import byui.cit260.youGotNoCake.control.HelpControl;
+//import byui.cit260.youGotNoCake.control.YouGotNoCake;
 import java.util.Scanner;
 
 /**
@@ -95,12 +95,13 @@ private String getInput() {
     }
     private void startNewGame() {
         //create new game
-        GameControl.createNewGame(YouGotNoCake.getPlayer());
+        GameControl.createNewGame(StartProgramView.getPlayer());
         //display the game menu
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.displayMenu();
     }
     private void startExistingGame() {
+
         System.out.println("*** startExistingGame function called ***");
     }
     private void displayHelpMenu() {
