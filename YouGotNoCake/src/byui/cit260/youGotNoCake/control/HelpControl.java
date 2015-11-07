@@ -12,7 +12,6 @@ import byui.cit260.youGotNoCake.model.Player;
  * @author Betsey
  */
 public class HelpControl {
-    static void displayHelpMenu(Player player) {
-        System.out.println("\n*** displayHelpMenu stub function called ***");}
-    
+    static void displayHelpMenu(Player player) {        
+        System.out.println("*** startExistingGame function called ***");} 
 }

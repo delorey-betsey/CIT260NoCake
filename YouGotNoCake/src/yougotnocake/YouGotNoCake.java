@@ -1,11 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package yougotnocake;
 
-//import byui.cit260.youGotNoCake.model.Albertsons;
+import byui.cit260.youGotNoCake.view.StartProgramView;
+
+public class YouGotNoCake {
+    public static void main(String[] args){
+        
+        //create Start ProgramView and start the program
+        StartProgramView startProgramView = new StartProgramView();
+        startProgramView.startProgram();
+        }
+ }   
+    
+    
+    //import byui.cit260.youGotNoCake.model.Albertsons;
 //import byui.cit260.youGotNoCake.model.BYUILab;
 //import byui.cit260.youGotNoCake.model.Backyard;
 //import byui.cit260.youGotNoCake.model.Barbershop;
@@ -40,20 +48,6 @@ package yougotnocake;
 //import byui.cit260.youGotNoCake.model.SleepAids;
 //import byui.cit260.youGotNoCake.model.SovietBakeShopL;
 //import byui.cit260.youGotNoCake.model.Treehouse;
-
-import byui.cit260.youGotNoCake.view.StartProgramView;
-/**
- *
- * @author Alyse
- */
-public class YouGotNoCake {
-    public static void main(String[] args){
-        
-        //create Start ProgramView and start the program
-        StartProgramView startProgramView 
-                                 = new StartProgramView();
-        startProgramView.startProgram();
-        }
     /**
      * @param args the command line arguments
      */
@@ -311,4 +305,4 @@ public class YouGotNoCake {
 //        System.out.println(treehouseInfo);
 //    }
 //    
-}
+
