@@ -122,21 +122,14 @@ public class CalcBMIMenuView {
 
     public double calcBMI(int height, int weight){
         
-       if(height < 48 || height > 96){
-            return -1;
-        } else
-        {
-        
-            if(weight < 50 || weight > 500){
-                 return -1;
-            }
-
             double BMI_MULTIPLIER = 703;
 
             double result;
-            result = (double) (weight / Math.pow(height,2) * BMI_MULTIPLIER);
+            double roundoff;
+            roundoff = (weight / Math.pow(height,2) * BMI_MULTIPLIER);
+            result = Math.round(roundoff*100)/100;
             return result;
         }
     }
-}
+
 

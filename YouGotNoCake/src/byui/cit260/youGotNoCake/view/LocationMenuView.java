@@ -367,7 +367,7 @@ class LocationMenuView {
         
         public void display14() {
                 //School
-                System.out.println("*\n Welcome to School");
+                System.out.println("*\n Welcome to Skool");
 
                 System.out.println("*\n No cake here."
                         + "\nWhile you are here we would love to calculate your BMI."

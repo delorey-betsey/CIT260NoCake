@@ -107,7 +107,7 @@ public class CalcXmasMenuView {
                     //the available functions in the Integer class
                     //to see the available functions, type 'Integer.' and hit enter.
                     int m = Integer.parseInt(month);
-                    if (m > 47 && m < 97){
+                    if (m > 0 && m < 13){
                         return m;  //return the valid choice
                     }  
                 } else {
@@ -132,12 +132,12 @@ public class CalcXmasMenuView {
         todaysJulian = c + day + e + f - 1524.5;
         
         //Find days between today and Christmas
-        result = XMAS_2015_julian - todaysJulian;
-                
+        
+        double roundoff = XMAS_2015_julian - todaysJulian;
+        result = Math.round(roundoff*100)/100;
         return result;
         }
     }
 
 
-    
-
+ 

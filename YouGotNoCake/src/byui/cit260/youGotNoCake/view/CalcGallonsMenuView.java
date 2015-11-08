@@ -67,7 +67,7 @@ public class CalcGallonsMenuView {
                     //the available functions in the Integer class
                     //to see the available functions, type 'Integer.' and hit enter.
                     int m = Integer.parseInt(members);
-                    if (m < 1 && m > 50){
+                    if (m >0 && m < 51){
                         return m;  //return the valid choice
                     }  
                 } else {
