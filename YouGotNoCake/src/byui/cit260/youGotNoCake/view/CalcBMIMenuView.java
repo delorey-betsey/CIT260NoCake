@@ -26,14 +26,16 @@ public class CalcBMIMenuView {
 
         double result = this.calcBMI(height,weight);  //calculate BMI based on player input
         
-        System.out.println("Below 18.5         Underweight"
-                + "\n18.5-24.9          Normal or Healthy Weight"
-                + "\n25.0-29.9          Overweight"                
-                + "\n30.0 and Above     Underweight");
+        
 
         System.out.println("\nYour BMI is:     " 
         + result  //display the calculated BMI"
-        );
+        + "\n");
+        System.out.println("Below 18.5         Underweight"
+        + "\n18.5-24.9          Normal or Healthy Weight"
+        + "\n25.0-29.9          Overweight"                
+        + "\n30.0 and Above     Underweight"
+        + "\n");
         System.out.println("\n A one-hour workout is 4% of your day...NO excuses."  
                 + "\nContinue your quest...");
         System.out.println(

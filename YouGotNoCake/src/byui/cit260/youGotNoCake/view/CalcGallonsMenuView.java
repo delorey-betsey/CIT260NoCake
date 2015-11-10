@@ -22,7 +22,7 @@ public class CalcGallonsMenuView {
 
         double result = this.calcGallons(members);  //calculate gallons flushed based on user input
         
-        System.out.println("\nYour household waste water in gallons per day:     " 
+        System.out.println("\nYour household waste water in gallons per day from flushing is :     " 
                 + result  //display the calculated gallons"
         );
         System.out.println ("\nNo wonder it doesn’t smell very good down here."

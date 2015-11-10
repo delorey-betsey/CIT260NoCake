@@ -1,12 +1,12 @@
 package byui.cit260.youGotNoCake.view;
-import java.util.Scanner;
 /**
  *
  * @author Betsey
  */
-public class MainMenuView {
+public class MainMenuView extends View {
     
-    private final String MENU = "\n"
+    public MainMenuView() {
+        super("\n"
         +"-----------------------------------------------------------------------"
         +"\n          Main Menu"
         +"\n-----------------------------------------------------------------------"
@@ -15,57 +15,15 @@ public class MainMenuView {
         +"\n          H - Get help on how to play the game"
         +"\n          S - Save game"
         +"\n          E - Exit"
-        +"\n-----------------------------------------------------------------------";
-    
-    public void displayMenu() {
-    
-        char selection = ' ';
-        do {
-            System.out.println(MENU);  //display the main menu
-            
-            String input = this.getInput();   //get the user's selection
-            selection = input.charAt(0);  //get first character of string
-        
-        this.doAction(selection);  //do action based on selection
-        
-        }while (selection != 'E');  //while the selection is not Exit
+        +"\n-----------------------------------------------------------------------");
     }
- 
-    private String getInput() {
-         
-        boolean valid = false;    //indicates if the name has been retrieved
-        String selection = null;
-        Scanner keyboard = new Scanner(System.in); //keyboard input stream
-        
-        while(!valid) {    //while a choice has not been retrieved
-            
-            //prompt for the player's menu selection
-            System.out.println(">>> Enter main menu selection below.");
-            
-            //get the choice from the keyboard and trim off the blanks
 
-            selection = keyboard.nextLine();
-            selection = selection.trim();
-            
-            // if the selection is a valid menu choice
-            if (selection.length() > 1) {
-                System.out.println("Invalid selection - must be one valid letter.");
-            }else{
-            if("N".equals(selection) ||
-                "G".equals(selection) ||
-                "H".equals(selection) ||
-                "S".equals(selection) ||
-                "E".equals(selection) ){
-                break; //out of the repetition (exit)
-            }else
-                System.out.println("Invalid selection - must be one valid letter.");
-            }
-        }
-    return selection;     //return the name
-    }
-    
-    public void doAction(char selection){
-        switch (selection){
+    @Override
+    public boolean doAction(Object obj){
+        String value = (String) obj; 
+        value = value.toUpperCase(); //convert to all upper case
+        char choice = value.charAt(0);
+        switch (choice){
             case 'N': //create and start a new game
                 this.displayLocationMenu();
                 break;
@@ -79,10 +37,11 @@ public class MainMenuView {
                 this.saveGame();
                 break;
             case 'E': //exit the program
-                return;
+                return false;
             default:
                 System.out.println("Invalid selection - must be one valid letter.");
         }
+        return false;
     }
     
      private void displayLocationMenu() {
@@ -101,7 +60,7 @@ public class MainMenuView {
         //display Help menu
 
         HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.displayHelpMenu();
+        helpMenu.display();
     }
     
     private void saveGame() {

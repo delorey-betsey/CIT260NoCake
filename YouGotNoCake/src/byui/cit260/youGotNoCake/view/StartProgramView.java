@@ -29,7 +29,7 @@ public class StartProgramView {
         //Display the Main menu.    
         
         MainMenuView mainMenu = new MainMenuView();
-        mainMenu.displayMenu();
+        mainMenu.display();
         
     }
     public void displayBanner() {

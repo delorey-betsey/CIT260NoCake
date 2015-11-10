@@ -63,6 +63,7 @@ class LocationMenuView {
 
             selection = keyboard.nextLine();
             selection = selection.trim();
+            selection = selection.toUpperCase();
             
             //if 'E' the control falls through and returns to Main Menu
             //then checks to validate input is integer
@@ -162,8 +163,9 @@ class LocationMenuView {
             case 25: //display BYUI Computer Lab
                 this.display25();
                 break;
-//            case 'E': //exit the program
-//                return;
+            case 'E': //exit the program
+                MainMenuView mainMenu = new MainMenuView();
+                mainMenu.display();          
             default:
                 System.out.println("\n*** Invalid selection *** Try again.");
         }
@@ -171,7 +173,7 @@ class LocationMenuView {
 
         public void display01() {
         //Barbershop
-            System.out.println(
+        System.out.println(
         "======================================================================");
         System.out.println(
      "*\nWelcome to the Barbershop---------------------------------------------");
@@ -185,25 +187,23 @@ class LocationMenuView {
         }
         
         public void display02() {
-            
         //Your Backyard
         System.out.println(
         "======================================================================");
         System.out.println(
      "*\nWelcome to Your Own Backyard------------------------------------------");
 
-        System.out.println("*\n No cake here... )-:"     
+        System.out.println("*\nNo cake here... )-:"     
         + "\nYikes, Neighborhood Bully!  Run!! Never mind a toy bat, "
-        + "\nwhere’s my tranquilizer dart when I need it?!?!??"
+        + "\nthere’s my tranquilizer dart just when I need it!"
         + "\n"
-        + "\nHold on, there IS something for your list!");  
+        + "\nCross item off my list!");  
 
             CrossOffItemMenuView crossOffItemMenuView = new CrossOffItemMenuView();
             crossOffItemMenuView.displayMenu(); 
         }
         
         public void display03() {
-            
         //Friend's House
         System.out.println(
         "======================================================================");    
@@ -212,7 +212,7 @@ class LocationMenuView {
 
         System.out.println("*\nNo cake here )-:" 
         + "\nBut you may learn something." 
-        +"\nWe know you're excited for Christmas!"
+        + "\nWe know you're excited for Christmas!"
         + "\nHey buddy, tell me again, how many days until Christmas?"); 
                 
             CalcXmasMenuView xmasMenuView = new CalcXmasMenuView();
@@ -220,22 +220,26 @@ class LocationMenuView {
         }
         
         public void display04() {
-                //Your own frontyard
-                System.out.println("*\n Welcome to Your own frontyard");
+        //Your own frontyard
+        System.out.println(
+        "======================================================================");
+        System.out.println(
+     "*\nWelcome to Your own Frontyard-----------------------------------------");
 
-                System.out.println("*\n No cake here )-: But you find some bananas."
-                        + "\n You better grab some of those bananas from your shade tree." 
-                        + "\n You might wind up having to make your own cake."
-                        + "\n "
-                        + "\n "
-                        + "\n Cross item off my list."
-                        + "\n N - next location.");
-                System.out.println("*\n **********************************************");
-        }
+        System.out.println("*\nNo cake here )-: "
+        + "\nYou better grab some of those bananas from your shade tree." 
+        + "\nYou might wind up having to make your own cake."
+        + "\n"
+        + "\n"
+        + "\nCross item off my list!");  
+
+            CrossOffItemMenuView crossOffItemMenuView = new CrossOffItemMenuView();
+            crossOffItemMenuView.displayMenu(); 
+        } 
         
         public void display05() {
         //Barbershop
-            System.out.println(
+        System.out.println(
         "======================================================================");
         System.out.println(
      "*\nWelcome to the Museum-------------------------------------------------");
@@ -250,84 +254,97 @@ class LocationMenuView {
         }    
         
         public void display06() {
-                //Garage
-                System.out.println("*\n Welcome to Garage");
+        //Garage
+        System.out.println(
+        "======================================================================");
+        System.out.println(
+     "*\nWelcome to the Garage------------------------------------------------");
+        System.out.println("*\nNo cake here... )-:"
+        + "\nBut who should be over there"  
+        + "\nbehind the pile of newspapers"
+        + "\nnext to the gasoline soaked rags,"
+        + "\nbut the Sleep Apnea Fairy!"
+        + "\n"
+        + "\nCross item off my list!");  
 
-                System.out.println("*\n No cake here."
-                        + "\n But who should be over there"  
-                        + "\n behind the pile of newspapers"
-                        + "\n next to the gasoline soaked rags,"
-                        + "\n but the sleep apnea fairy??"
-                        + "\n Cross item off my list."
-                        + "\n N - next location");
-                System.out.println("*\n **********************************************");
-        }
-        
+            CrossOffItemMenuView crossOffItemMenuView = new CrossOffItemMenuView();
+            crossOffItemMenuView.displayMenu(); 
+        }        
+            
         public void display07() {
-                //Soviet Bakeshop
-                System.out.println("*\n Welcome to Soviet Bakeshop");
+        //Soviet Bakeshop
+        System.out.println(
+        "======================================================================");
+        System.out.println(
+     "*\nWelcome to Soviet Bakeshop--------------------------------------------");
 
-                System.out.println("*\n Cake eats you!"
-                        + "\n я мертв. Конец. До свидания."
-                        + "\n (I’m dead. The End. Bye.)"
-                        + "\n "
-                        + "\n You Lose!"
-                        + "\n S - start new game"
-                        + "\n E - exit game");
-                System.out.println("*\n **********************************************");
+        System.out.println("*\nCake eats you!"
+        + "\nя мертв. Конец. До свидания."
+        + "\n(I’m dead. The End. Bye.)"
+        + "\n"
+        + "\nYOU LOSE! The End. Good-bye."
+        + "\n"
+        + "\nE - Exit.");
+        System.out.println(
+       "\n======================================================================");
         }
         
         public void display08() {
-                //Albertson’s
-                System.out.println("*\n Welcome to Albertson’s");
+        //Albertson’s
+        System.out.println(
+        "======================================================================");
+        System.out.println(
+     "*\nWelcome to Albertson’s-----------------------------------------------");
 
-                System.out.println("*\n No cake here."
-                        + "\n Smile, you’re on security cameras."
-                        + "\n So remember, that 5 gallon tub of spumoni isn’t free."
-                        + "\n "
-                        + "\n Cross item off list."
-                        + "\n "
-                        + "\n N - next location");
-                System.out.println("*\n **********************************************");
-        }
-        
+        System.out.println("*\nNo cake here... )-:"
+        + "\nSmile, you’re on security cameras."
+        + "\nSo remember, that 5 gallon tub of spumoni isn’t free."
+        + "\n"
+        + "\nCross item off my list!");  
+
+            CrossOffItemMenuView crossOffItemMenuView = new CrossOffItemMenuView();
+            crossOffItemMenuView.displayMenu(); 
+        }     
+
         public void display09() {
-                //Filling Station
-                System.out.println("*\n Welcome to Filling Station");
+        //Filling Station
+        System.out.println(
+        "======================================================================");
+        System.out.println(
+     "*\nWelcome to the Filling Station-------------------------------------------");
 
-                System.out.println("*\n No cake here."
-                        + "\n I thought that’s what they used to call gas stations."
-                        + "\n But these guys are pushing sugar out of their pumps."
-                        + "\n Get me outta here."
-                        + "\n "
-                        + "\n Cross item off list."
-                        + "\n N - next location");
-                System.out.println("*\n **********************************************");
-        }
+        System.out.println("*\nNo cake here... )-:" 
+        + "\nI thought that’s what they used to call gas stations."
+        + "\nBut these guys are pushing sugar out of their pumps."
+        + "\nGet me outta here."
+        + "\n"
+        + "\nCross item off my list!");  
+
+            CrossOffItemMenuView crossOffItemMenuView = new CrossOffItemMenuView();
+            crossOffItemMenuView.displayMenu(); 
+        }  
         
         public void display10() {
-            
         //Manhole
         System.out.println(
         "======================================================================");    
         System.out.println(
      "*\nWelcome to the Manhole------------------------------------------------");
 
-        System.out.println("*\n No cake here…"
+        System.out.println("*\nNo cake here…"
         + "\nDid you know?..."
         + "\nAmericans use more water each day by flushing the toilet than they do"
         + "\nby showering or any other activity."
+        + "\n"
         + "\nSave water!  Check your toilet for leaks.  Adjust the water level.");
-        
-        System.out.println("*\n **********************************************");
-         
+                 
             CalcGallonsMenuView calcGallonsMenuView = new CalcGallonsMenuView();
             calcGallonsMenuView.displayMenu();
         }
         
         public void display11() {
         //Barbershop
-            System.out.println(
+        System.out.println(
         "======================================================================");
         System.out.println(
      "*\nWelcome to the Treehouse----------------------------------------------");
@@ -344,61 +361,73 @@ class LocationMenuView {
         }
  
         public void display12() {
-                //Outhouse
-                System.out.println("*\n Welcome to Outhouse");
+        //Outhouse
+        System.out.println(
+        "======================================================================");
+        System.out.println(
+     "*\nWelcome to the Outhouse---------------------------------------------------");
 
-                System.out.println("*\n No cake here."
-                        + "\n But thankfully someone forgot their whoopie cushion."
-                        + "\n That will come in handy for the birthday party later."
-                        + "\n "
-                        + "\n Cross item off list."
-                        + "\n "
-                        + "\n N - next location");
-                System.out.println("*\n **********************************************");
-        }
+        System.out.println("*\nNo cake here... )-:"  
+        + "\nBut thankfully someone forgot their whoopie cushion."
+        + "\nThat will come in handy for the birthday party later."
+        + "\n"
+        + "\nCross item off my list!");  
+
+            CrossOffItemMenuView crossOffItemMenuView = new CrossOffItemMenuView();
+            crossOffItemMenuView.displayMenu(); 
+        }  
         
         public void display13() {
-                //Playground
-                System.out.println("*\n Welcome to Playground");
+        //Playground
+        System.out.println(
+        "======================================================================");
+        System.out.println(
+     "*\nWelcome to the Playground-------------------------------------------------");
 
-                System.out.println("*\n No Cake here."
-                        + "\n Oh my heavens, that kid is being hauled off to jail as he should be."
-                        + "\n Can you believe he had a plastic fork in his lunch box??"
-                        + "\n Catastrophe averted!"
-                        + "\n "
-                        + "\n Cross item off list."
-                        + "\n N - next location");
-                System.out.println("*\n **********************************************");
-        }
+        System.out.println("*\nNo cake here... )-:" 
+        + "\nOh my heavens, that kid is being hauled off to jail as he should be."
+        + "\nCan you believe he had a plastic fork in his lunch box??"
+        + "\nCatastrophe averted!"
+        + "\n"
+        + "\nCross item off my list!");  
+
+            CrossOffItemMenuView crossOffItemMenuView = new CrossOffItemMenuView();
+            crossOffItemMenuView.displayMenu(); 
+        }  
         
         public void display14() {
-                //School
-                System.out.println("*\n Welcome to Skool");
+        //School
+        System.out.println(
+        "======================================================================");
+        System.out.println(
+     "*\nWelcome to Skool------------------------------------------------------");
 
-                System.out.println("*\n No cake here."
-                        + "\nWhile you are here we would love to calculate your BMI."
-                        + "\nKnowledge is power!");
-                System.out.println("*\n **********************************************");
-                
-                CalcBMIMenuView bmiMenuView = new CalcBMIMenuView();
-                bmiMenuView.displayMenu();
-                //display result.
-                //display location menu
+        System.out.println("*\nNo cake here."
+        + "\nWhile you are here we would love to calculate your BMI."
+        + "\nKnowledge is power!");
+        
+            CalcBMIMenuView bmiMenuView = new CalcBMIMenuView();
+            bmiMenuView.displayMenu();
+        //display result.
+        //display location menu
         }
         
         public void display15() {
-                //Florist
-                System.out.println("*\n Welcome to Florist");
+        //Florist
+        System.out.println(
+        "======================================================================");
+        System.out.println(
+     "*\nWelcome to Florist----------------------------------------------------");
 
-                System.out.println("*\n No cake here."
-                        + "\n I said flour you idiot, not flower."
-                        + "\n "
-                        + "\n Cross item off list."
-                        + "\n "
-                        + "\n "
-                        + "\n N- next location");
-                System.out.println("*\n **********************************************");
-        }
+        System.out.println("*\nNo cake here... )-:" 
+        + "\nI said flour you idiot, not flower."
+        + "\n"
+        + "\n"
+        + "\nCross item off my list!");  
+
+            CrossOffItemMenuView crossOffItemMenuView = new CrossOffItemMenuView();
+            crossOffItemMenuView.displayMenu(); 
+        } 
        
         public void display16() {
         //Grandma’s House
@@ -408,29 +437,32 @@ class LocationMenuView {
      "*\nWelcome to Your Grandma's House---------------------------------------"); 
 
         System.out.println("*\nCupcakes!!"
-                + "\nThese’ll do. YOU WIN!!"
-                + "\n "
-                + "\nYOU WIN!! The End. Good bye."
-                + "\n"
-                + "\nE - Exit.");
-        System.out.println("*\n **********************************************");
+        + "\nThese’ll do. YOU WIN!!"
+        + "\n"
+        + "\nYOU WIN!! The End. Good bye."
+        + "\n"
+        + "\nE - Exit.");
+        System.out.println(
+       "\n======================================================================");
         }
  
-        
         public void display17() {
-                //Creepy Guy’s House
-                System.out.println("*\n Welcome to Creepy Guy’s House");
+        //Creepy Guy’s House
+        System.out.println(
+        "======================================================================");
+        System.out.println(
+     "*\nWelcome to Creepy Guy’s House------------------------------------------");
 
-                System.out.println("*\n No Cake."
-                        + "\n Your end. The End. Good bye."
-                        + "\n "
-                        + "\n You Lose!"
-                        + "\n "
-                        + "\n "
-                        + "\n E - end game");
-                System.out.println("*\n **********************************************");
+        System.out.println("*\nNo Cake...but that's not the worst of it."
+        + "\nYour end. The End. Good bye."
+        + "\n"
+        + "\nYOU LOSE! The End. Good-bye."
+        + "\n"
+        + "\nE - Exit.");
+        System.out.println(
+       "\n======================================================================");
         }
-        
+
         public void display18() {
         //Barbershop
         System.out.println(
@@ -446,7 +478,7 @@ class LocationMenuView {
        "\n======================================================================");             
         }
 
-         public void display19() {
+        public void display19() {
         //Barbershop
         System.out.println(
         "======================================================================");
@@ -455,7 +487,7 @@ class LocationMenuView {
 
         System.out.println("*\nNo cake here… )-:"       
         + "\nYou need a little inspiration.  Here ya go:  "
-        + "Never, never, never, never give up."
+        + "\nNever, never, never, never give up."
         + "\n"
         + "\nNothing good to eat here.  Continue your quest...");
         System.out.println(
@@ -463,32 +495,38 @@ class LocationMenuView {
         }  
 
         public void display20() {
-                //Dark Alley
-                System.out.println("*\n Welcome to Dark Alley");
+        //Dark Alley
+        System.out.println(
+        "======================================================================");
+        System.out.println(
+     "*\nWelcome to Dark Alley-------------------------------------------------");
 
-                System.out.println("*\n No cake here."
-                        + "\n Dumpster with empty cakebox."
-                        + "\n You’re on the trail."
-                        + "\n And, oh look, a copy of the tax code."
-                        + "\n Cross item off list."
-                        + "\n "
-                        + "\n N - next location");
-                System.out.println("*\n **********************************************");
-        }
+        System.out.println("*\nNo cake here... )-:" 
+        + "\nDumpster with empty cakebox."
+        + "\nYou’re on the trail."
+        + "\nAnd, oh look, a copy of the tax code."
+        + "\n"
+        + "\nCross item off my list!");  
+
+            CrossOffItemMenuView crossOffItemMenuView = new CrossOffItemMenuView();
+            crossOffItemMenuView.displayMenu(); 
+        }  
         
         public void display21() {
-                //Dollar Theatre
-                System.out.println("*\n Welcome to Dollar Theatre");
+        //Dollar Theatre
+        System.out.println(
+        "======================================================================");
+        System.out.println(
+     "*\nWelcome to the Dollar Theatre-----------------------------------------");
 
-                System.out.println("*\n No cake here."
-                        + "\n But that guy in the back row sure has moves smooth as butta."
-                        + "\n "
-                        + "\n Cross item off list."
-                        + "\n "
-                        + "\n "
-                        + "\n N - next location");
-                System.out.println("*\n **********************************************");
-        }
+        System.out.println("*\nNo cake here... )-:" 
+        + "\nBut that guy in the back row sure has moves smooth as butta."
+        + "\n"
+        + "\nCross item off my list!");  
+
+            CrossOffItemMenuView crossOffItemMenuView = new CrossOffItemMenuView();
+            crossOffItemMenuView.displayMenu(); 
+        }  
         
         public void display22() {
         //Motel 6
@@ -503,50 +541,59 @@ class LocationMenuView {
         + "\nYOU WIN!! The End. Good bye."
         + "\n"
         + "\nE - Exit.");
-        System.out.println("*\n **********************************************");
+        System.out.println(
+       "\n======================================================================");
         }
         
         public void display23() {
-                //Dr. Roots
-                System.out.println("*\n Welcome to Dr. Roots");
+        //Dr. Roots
+        System.out.println(
+        "======================================================================");
+        System.out.println(
+     "*\nWelcome to Dr. Roots Dental Office------------------------------------");
 
-                System.out.println("*\n You get more laughing gas."
-                        + "\n You wake up in a tree. The End. Good bye."
-                        + "\n "
-                        + "\n You lose!"
-                        + "\n "
-                        + "\n "
-                        + "\n E - end game");
-                System.out.println("*\n **********************************************");
+        System.out.println("*\nYou get more laughing gas."
+        + "\nYou wake up in a tree. The End. Good bye."
+        + "\n"
+        + "\nYOU LOSE! The End. Good-bye."
+        + "\n"
+        + "\nE - Exit.");
+        System.out.println(
+       "\n======================================================================");
         }
         
         public void display24() {
-                //Police Station
-                System.out.println("*\n Welcome to Police Station");
+        //Police Station
+        System.out.println(
+        "======================================================================");
+        System.out.println(
+     "*\nWelcome to Police Station---------------------------------------------");
 
-                System.out.println("*\n This isn't cake."
-                        + "\n It's donuts. I can wash ‘em down with warm milk."
-                        + "\n "
-                        + "\n Cross item off list."
-                        + "\n "
-                        + "\n "
-                        + "\n N - next location");
-                System.out.println("*\n **********************************************");
-        }
+        System.out.println("*\nThis isn't cake )-:"
+        + "\nIt's donuts! I can wash ‘em down with warm milk."
+        + "\n"
+        + "\nCross item off my list!");  
+
+            CrossOffItemMenuView crossOffItemMenuView = new CrossOffItemMenuView();
+            crossOffItemMenuView.displayMenu(); 
+        }  
         
         public void display25() {
-                //BYUI Computer Lab
-                System.out.println("*\n Welcome to BYUI Computer Lab");
+        //BYUI Computer Lab
+        System.out.println(
+        "======================================================================");
+        System.out.println(
+     "*\nWelcome to BYUI Computer Lab");
 
-                System.out.println("*\n No cake here."
-                        + "\n Why are there so many old people in all my classes?"
-                        + "\n That explains the grim reaper in the corner."
-                        + "\n "
-                        + "\n Cross item off list."
-                        + "\n "
-                        + "\n N - next location.");
-                System.out.println("*\n **********************************************");
-        }
+        System.out.println("*\nNo cake here... )-:" 
+        + "\nWhy are there so many old people in all my classes?"
+        + "\nThat explains the grim reaper in the corner."
+        + "\n"
+        + "\nCross item off my list!");  
+
+            CrossOffItemMenuView crossOffItemMenuView = new CrossOffItemMenuView();
+            crossOffItemMenuView.displayMenu(); 
+        } 
 
 
     }
