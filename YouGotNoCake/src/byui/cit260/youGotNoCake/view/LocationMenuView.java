@@ -234,18 +234,20 @@ class LocationMenuView {
         }
         
         public void display05() {
-                //Museum
-                System.out.println("*\n Welcome to Museum");
+        //Barbershop
+            System.out.println(
+        "======================================================================");
+        System.out.println(
+     "*\nWelcome to the Museum-------------------------------------------------");
 
-                System.out.println("*\n Marie Antoinette’s Cake"
-                        + "\n It's stale, you try to take a bite. You crack a tooth."
-                        + "\n "
-                        + "\n Better see Dr. Roots."
-                        + "\n "
-                        + "\n "
-                        + "\n Choose next location.");
-                System.out.println("*\n **********************************************");
-        }
+        System.out.println("*\nNo cake here… )-:"       
+        + "\nAt least none that's edible.  You try Marie Antoinette's Cake but"
+        + "\nit's so stale, you crack a tooth. Better see Dr. Roots. "
+        + "\n"
+        + "\nNothing good happening here.  Continue your quest...");
+        System.out.println(
+       "\n======================================================================");             
+        }    
         
         public void display06() {
                 //Garage
@@ -324,19 +326,23 @@ class LocationMenuView {
         }
         
         public void display11() {
-                //Treehouse
-                System.out.println("*\n Welcome to Treehouse");
+        //Barbershop
+            System.out.println(
+        "======================================================================");
+        System.out.println(
+     "*\nWelcome to the Treehouse----------------------------------------------");
 
-                System.out.println("*\n No cake here."
-                        + "\n Inspiration:"
-                        + "\n When the going gets tough, the tough get going."
-                        + "\n "
-                        + "\n "
-                        + "\n "
-                        + "\n Choose next location.");
-                System.out.println("*\n **********************************************");
+        System.out.println("*\nNo cake here… )-:"       
+        + "\nBut it's a good place to catch up on your meditation, Ommmmm..."
+        + "\nWhen the going gets tough, the tough get going!"
+        + "\nOmmm...When the going gets tough, the tough get going!"
+        + "\nOmmm...When the going gets tough, the tough get going!"
+        + "\n"
+        + "\nNothing happening here.  Continue your quest...");
+        System.out.println(
+       "\n======================================================================");             
         }
-        
+ 
         public void display12() {
                 //Outhouse
                 System.out.println("*\n Welcome to Outhouse");
@@ -393,20 +399,23 @@ class LocationMenuView {
                         + "\n N- next location");
                 System.out.println("*\n **********************************************");
         }
-        
+       
         public void display16() {
-                //Grandma’s House
-                System.out.println("*\n Welcome to Grandma’s House");
+        //Grandma’s House
+        System.out.println(
+        "======================================================================");    
+        System.out.println(
+     "*\nWelcome to Your Grandma's House---------------------------------------"); 
 
-                System.out.println("*\n Cupcakes"
-                        + "\n These’ll do. The End. Good bye."
-                        + "\n "
-                        + "\n "
-                        + "\n You Win!"
-                        + "\n "
-                        + "\n E - end game.");
-                System.out.println("*\n **********************************************");
+        System.out.println("*\nCupcakes!!"
+                + "\nThese’ll do. YOU WIN!!"
+                + "\n "
+                + "\nYOU WIN!! The End. Good bye."
+                + "\n"
+                + "\nE - Exit.");
+        System.out.println("*\n **********************************************");
         }
+ 
         
         public void display17() {
                 //Creepy Guy’s House
@@ -423,33 +432,36 @@ class LocationMenuView {
         }
         
         public void display18() {
-                //Library
-                System.out.println("*\n Welcome to Library");
+        //Barbershop
+        System.out.println(
+        "======================================================================");
+        System.out.println(
+     "*\nWelcome to the Library------------------------------------------------");
 
-                System.out.println("*\n No cake here."
-                        + "\n Theres cookbooks. Shhhhhhhhhh. ZZZZzzzzzzzz."
-                        + "\n "
-                        + "\n "
-                        + "\n "
-                        + "\n "
-                        + "\n Choose next location.");
-                System.out.println("*\n **********************************************");
+        System.out.println("*\nNo cake here… )-:"       
+        + "\nBut there are tons of cookbooks!  YIPPEE! Shhhhhhhhhh!! ZZZZzzzzzzzz."
+        + "\n"
+        + "\nNothing happening here.  Continue your quest...");
+        System.out.println(
+       "\n======================================================================");             
         }
-        
-        public void display19() {
-                //Skate park
-                System.out.println("*\n Welcome to Skate park");
 
-                System.out.println("*\n No cake here."
-                        + "\n Inspiration:  Never, never, never, never give up."
-                        + "\n "
-                        + "\n "
-                        + "\n "
-                        + "\n "
-                        + "\n Choose next location.");
-                System.out.println("*\n **********************************************");
-        }
-        
+         public void display19() {
+        //Barbershop
+        System.out.println(
+        "======================================================================");
+        System.out.println(
+     "*\nWelcome to the Skate Park---------------------------------------------");
+
+        System.out.println("*\nNo cake here… )-:"       
+        + "\nYou need a little inspiration.  Here ya go:  "
+        + "Never, never, never, never give up."
+        + "\n"
+        + "\nNothing good to eat here.  Continue your quest...");
+        System.out.println(
+       "\n======================================================================");             
+        }  
+
         public void display20() {
                 //Dark Alley
                 System.out.println("*\n Welcome to Dark Alley");
@@ -479,17 +491,19 @@ class LocationMenuView {
         }
         
         public void display22() {
-                //Motel 6
-                System.out.println("*\n Welcome to Motel 6");
-
-                System.out.println("*\n Cake!"
-                        + "\n Party time!  Excellent!! The End. Good bye."
-                        + "\n "
-                        + "\n You win."
-                        + "\n "
-                        + "\n "
-                        + "\n E - end game");
-                System.out.println("*\n **********************************************");
+        //Motel 6
+        System.out.println(
+        "======================================================================");    
+        System.out.println(
+     "*\nWelcome to Motel 6-----------------------------------------------------"); 
+      
+        System.out.println("*\nCake!!"
+        + "\nParty time!  Excellent!! YOU WIN!!"
+        + "\n"
+        + "\nYOU WIN!! The End. Good bye."
+        + "\n"
+        + "\nE - Exit.");
+        System.out.println("*\n **********************************************");
         }
         
         public void display23() {
