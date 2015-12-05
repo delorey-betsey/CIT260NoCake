@@ -27,7 +27,7 @@ public abstract class View implements ViewInterface {
             System.out.println(this.promptMessage);  //display prompt menu
             value = this.getInput();   //get value end user entered
             done = this.doAction(value);  //do action based on value entered
-        }while (!done);
+        } while (!done);
     }
 
     @Override

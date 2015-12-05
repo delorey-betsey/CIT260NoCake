@@ -1,9 +1,10 @@
 package byui.cit260.youGotNoCake.view;
-/**
- *
- * @author Betsey
- */
+
+import byui.cit260.youGotNoCake.model.Player;
+
 public class MainMenuView extends View {
+    
+    private Player mmvPlayer; 
     
     public MainMenuView() {
         super("\n"
@@ -18,6 +19,20 @@ public class MainMenuView extends View {
         +"\n-----------------------------------------------------------------------");
     }
 
+    public MainMenuView(Player player) {
+        super("\n"
+        +"-----------------------------------------------------------------------"
+        +"\n          Main Menu"
+        +"\n-----------------------------------------------------------------------"
+        +"\n          N - Start new game"
+        +"\n          G - Get and start existing game"
+        +"\n          H - Get help on how to play the game"
+        +"\n          S - Save game"
+        +"\n          E - Exit"
+        +"\n-----------------------------------------------------------------------");
+        mmvPlayer = player;
+    }
+    
     @Override
     public boolean doAction(Object obj){
         String value = (String) obj; 
@@ -37,7 +52,7 @@ public class MainMenuView extends View {
                 this.saveGame();
                 break;
             case 'E': //exit the program
-                return false;
+                System.exit(0);
             default:
                 System.out.println("Invalid selection - must be one valid letter.");
         }
@@ -47,8 +62,8 @@ public class MainMenuView extends View {
      private void displayLocationMenu() {
         //display Help menu
 
-        LocationMenuView locationMenu = new LocationMenuView();
-        locationMenu.displayLocationMenu();
+        LocationMenuView locationMenu = new LocationMenuView(mmvPlayer);
+        locationMenu.display();
     }
     
     private void startExistingGame() {

@@ -1,25 +1,47 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package byui.cit260.youGotNoCake.model;
 
 import java.io.Serializable;
 import java.util.Objects;
+import java.util.ArrayList;
 
-/**
- *
- * @author Alyse
- */
 public class Player implements Serializable{ 
     //class-instance variables
     private String name;
     private Number gameID;
     private String gameStatus;
+    private ArrayList<String> foundCakeIngredients;
+    private ArrayList<String> foundPartySupplies;
+    private ArrayList<String> foundSleepAids;
 
     public Player() {
+        foundCakeIngredients = new ArrayList<String>();
+        foundPartySupplies = new ArrayList<String>();
+        foundSleepAids = new ArrayList<String>();
     }  
+
+    public ArrayList<String> getFoundCakeIngredients() {
+        return foundCakeIngredients;
+    }
+
+    public void setFoundCakeIngredients(ArrayList<String> foundCakeIngredients) {
+        this.foundCakeIngredients = foundCakeIngredients;
+    }
+
+    public ArrayList<String> getFoundPartySupplies() {
+        return foundPartySupplies;
+    }
+
+    public void setFoundPartySupplies(ArrayList<String> foundPartySupplies) {
+        this.foundPartySupplies = foundPartySupplies;
+    }
+
+    public ArrayList<String> getFoundSleepAids() {
+        return foundSleepAids;
+    }
+
+    public void setFoundSleepAids(ArrayList<String> foundSleepAids) {
+        this.foundSleepAids = foundSleepAids;
+    }
     
     public String getName() {
         return name;

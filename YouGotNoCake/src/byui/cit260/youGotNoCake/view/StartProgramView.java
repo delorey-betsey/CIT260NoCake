@@ -1,5 +1,6 @@
 package byui.cit260.youGotNoCake.view;
 
+import byui.cit260.youGotNoCake.model.Game;
 import byui.cit260.youGotNoCake.control.SetUpControl;
 import byui.cit260.youGotNoCake.model.Player;
 
@@ -10,8 +11,8 @@ public class StartProgramView {
     private static Game currentGame = null;
     private static Player player = null;
     
-    public StartProgramView() {
-    }
+//    public StartProgramView() {
+//    }
     public void startProgram(){
        
         //Display the banner screen
@@ -28,10 +29,11 @@ public class StartProgramView {
         
         //Display the Main menu.    
         
-        MainMenuView mainMenu = new MainMenuView();
+        MainMenuView mainMenu = new MainMenuView(player);
         mainMenu.display();
         
     }
+    
     public void displayBanner() {
         //Display welcome banner.
         System.out.println(

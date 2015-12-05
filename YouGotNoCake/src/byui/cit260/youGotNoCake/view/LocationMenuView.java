@@ -1,13 +1,25 @@
 package byui.cit260.youGotNoCake.view;
+import byui.cit260.youGotNoCake.model.Albertsons;
+import byui.cit260.youGotNoCake.model.BYUILab;
+import byui.cit260.youGotNoCake.model.Backyard;
+import byui.cit260.youGotNoCake.model.DarkAlley;
+import byui.cit260.youGotNoCake.model.DollarTheater;
+import byui.cit260.youGotNoCake.model.FillingStation;
+import byui.cit260.youGotNoCake.model.Florist;
+import byui.cit260.youGotNoCake.model.Frontyard;
+import byui.cit260.youGotNoCake.model.Garage;
+import byui.cit260.youGotNoCake.model.Outhouse;
+import byui.cit260.youGotNoCake.model.Player;
+import byui.cit260.youGotNoCake.model.Playground;
+import byui.cit260.youGotNoCake.model.PoliceStation;
 import java.util.Scanner;
-/**
- *
- * @author Betsey
- */
-class LocationMenuView {
+ 
+class LocationMenuView extends View{
 //receive player choice and display location text
+    private Player locationPlayer;
     
-    private final String LOCATION = "\n"
+    public LocationMenuView(){ 
+        super ("\n"
         +"-----------------------------------------------------------------------"
         +"\n          Location Menu"
         +"\n-----------------------------------------------------------------------"
@@ -21,25 +33,28 @@ class LocationMenuView {
         +"\n          22-Motel 6          23-Dr. Roots      24-Police Station"
         +"\n          25-BYUI Computer Lab"
         +"\n\n        E-Exit"
-        +"\n-----------------------------------------------------------------------";
-
-    public void displayLocationMenu() {
-    
-        char selection = ' ';
-        
-        int location = 0;
-        
-        do {
-            System.out.println(LOCATION);  //display the location menu
-            
-            String input = this.getInput();   //get the user's selection
-            selection = input.charAt(0);  //get first character of string
-        
-        }   //while the selection is not Exit we do the loop otherwise
-            //we fall through back to Main Menu
-            while (selection != 'E');  
+        +"\n-----------------------------------------------------------------------");
     }
     
+     public LocationMenuView(Player player){ 
+        super ("\n"
+        +"-----------------------------------------------------------------------"
+        +"\n          Location Menu"
+        +"\n-----------------------------------------------------------------------"
+        +"\n          1-Barbershop        8-Albertson's     15-Florist"
+        +"\n          2-Your Backyard     9-Filling Station 16-Grandma's House"
+        +"\n          3-Friend's House    10-Manhole        17-Creepy Guy's House"
+        +"\n          4-Your Frontyard    11-Treehouse      18-Library"
+        +"\n          5-Museum            12-Outhouse       19-Skate Park"
+        +"\n          6-Garage            13-Playground     20-Dark Alley"
+        +"\n          7-Soviet Bakeshop   14-Skool          21-Dollar Theatre"	
+        +"\n          22-Motel 6          23-Dr. Roots      24-Police Station"
+        +"\n          25-BYUI Computer Lab"
+        +"\n\n        E-Exit"
+        +"\n-----------------------------------------------------------------------");
+        this.locationPlayer = player;
+    }
+      
     private static boolean isInteger(String s) {
         try { 
             Integer.parseInt(s); 
@@ -50,7 +65,8 @@ class LocationMenuView {
         return true;
     }
     
-    private String getInput() {
+    @Override
+    public String getInput() {
 
             boolean valid = false;    //indicates if the choice has been retrieved
             String selection = null;
@@ -164,8 +180,9 @@ class LocationMenuView {
                 this.display25();
                 break;
             case 'E': //exit the program
-                MainMenuView mainMenu = new MainMenuView();
-                mainMenu.display();          
+                MainMenuView mainMenu = new MainMenuView(locationPlayer);
+                mainMenu.display();
+                break;
             default:
                 System.out.println("\n*** Invalid selection *** Try again.");
         }
@@ -188,6 +205,8 @@ class LocationMenuView {
         
         public void display02() {
         //Your Backyard
+        Backyard backyard = new Backyard(locationPlayer);
+        locationPlayer = backyard.pickupItem();
         System.out.println(
         "======================================================================");
         System.out.println(
@@ -199,8 +218,9 @@ class LocationMenuView {
         + "\n"
         + "\nCross item off my list!");  
 
-            CrossOffItemMenuView crossOffItemMenuView = new CrossOffItemMenuView();
-            crossOffItemMenuView.displayMenu(); 
+            CrossOffItemMenuView crossOffItemMenuView = new CrossOffItemMenuView(locationPlayer);
+            crossOffItemMenuView.display(); 
+            crossOffItemMenuView.pickUp();            
         }
         
         public void display03() {
@@ -221,6 +241,8 @@ class LocationMenuView {
         
         public void display04() {
         //Your own frontyard
+        Frontyard frontyard = new Frontyard(locationPlayer);
+        locationPlayer = frontyard.pickupItem();
         System.out.println(
         "======================================================================");
         System.out.println(
@@ -233,9 +255,10 @@ class LocationMenuView {
         + "\n"
         + "\nCross item off my list!");  
 
-            CrossOffItemMenuView crossOffItemMenuView = new CrossOffItemMenuView();
-            crossOffItemMenuView.displayMenu(); 
-        } 
+            CrossOffItemMenuView crossOffItemMenuView = new CrossOffItemMenuView(locationPlayer);
+            crossOffItemMenuView.display(); 
+            crossOffItemMenuView.pickUp();            
+        }
         
         public void display05() {
         //Barbershop
@@ -255,6 +278,8 @@ class LocationMenuView {
         
         public void display06() {
         //Garage
+        Garage garage = new Garage(locationPlayer);
+        locationPlayer = garage.pickupItem();
         System.out.println(
         "======================================================================");
         System.out.println(
@@ -267,8 +292,9 @@ class LocationMenuView {
         + "\n"
         + "\nCross item off my list!");  
 
-            CrossOffItemMenuView crossOffItemMenuView = new CrossOffItemMenuView();
-            crossOffItemMenuView.displayMenu(); 
+            CrossOffItemMenuView crossOffItemMenuView = new CrossOffItemMenuView(locationPlayer);
+            crossOffItemMenuView.display(); 
+            crossOffItemMenuView.pickUp();            
         }        
             
         public void display07() {
@@ -291,6 +317,8 @@ class LocationMenuView {
         
         public void display08() {
         //Albertson’s
+        Albertsons albertsons = new Albertsons(locationPlayer);
+        locationPlayer = albertsons.pickupItem();
         System.out.println(
         "======================================================================");
         System.out.println(
@@ -302,12 +330,15 @@ class LocationMenuView {
         + "\n"
         + "\nCross item off my list!");  
 
-            CrossOffItemMenuView crossOffItemMenuView = new CrossOffItemMenuView();
-            crossOffItemMenuView.displayMenu(); 
+            CrossOffItemMenuView crossOffItemMenuView = new CrossOffItemMenuView(locationPlayer);
+            crossOffItemMenuView.display(); 
+            crossOffItemMenuView.pickUp();            
         }     
 
         public void display09() {
         //Filling Station
+        FillingStation fillingStation = new FillingStation(locationPlayer);
+        locationPlayer = fillingStation.pickupItem();
         System.out.println(
         "======================================================================");
         System.out.println(
@@ -320,9 +351,10 @@ class LocationMenuView {
         + "\n"
         + "\nCross item off my list!");  
 
-            CrossOffItemMenuView crossOffItemMenuView = new CrossOffItemMenuView();
-            crossOffItemMenuView.displayMenu(); 
-        }  
+            CrossOffItemMenuView crossOffItemMenuView = new CrossOffItemMenuView(locationPlayer);
+            crossOffItemMenuView.display(); 
+            crossOffItemMenuView.pickUp();            
+        }
         
         public void display10() {
         //Manhole
@@ -362,6 +394,8 @@ class LocationMenuView {
  
         public void display12() {
         //Outhouse
+        Outhouse outhouse = new Outhouse(locationPlayer);
+        locationPlayer = outhouse.pickupItem();
         System.out.println(
         "======================================================================");
         System.out.println(
@@ -373,12 +407,15 @@ class LocationMenuView {
         + "\n"
         + "\nCross item off my list!");  
 
-            CrossOffItemMenuView crossOffItemMenuView = new CrossOffItemMenuView();
-            crossOffItemMenuView.displayMenu(); 
+            CrossOffItemMenuView crossOffItemMenuView = new CrossOffItemMenuView(locationPlayer);
+            crossOffItemMenuView.display(); 
+            crossOffItemMenuView.pickUp();            
         }  
         
         public void display13() {
         //Playground
+        Playground playground = new Playground(locationPlayer);
+        locationPlayer = playground.pickupItem();
         System.out.println(
         "======================================================================");
         System.out.println(
@@ -391,8 +428,9 @@ class LocationMenuView {
         + "\n"
         + "\nCross item off my list!");  
 
-            CrossOffItemMenuView crossOffItemMenuView = new CrossOffItemMenuView();
-            crossOffItemMenuView.displayMenu(); 
+            CrossOffItemMenuView crossOffItemMenuView = new CrossOffItemMenuView(locationPlayer);
+            crossOffItemMenuView.display(); 
+            crossOffItemMenuView.pickUp();            
         }  
         
         public void display14() {
@@ -414,6 +452,8 @@ class LocationMenuView {
         
         public void display15() {
         //Florist
+        Florist florist = new Florist(locationPlayer);
+        locationPlayer = florist.pickupItem();
         System.out.println(
         "======================================================================");
         System.out.println(
@@ -425,9 +465,10 @@ class LocationMenuView {
         + "\n"
         + "\nCross item off my list!");  
 
-            CrossOffItemMenuView crossOffItemMenuView = new CrossOffItemMenuView();
-            crossOffItemMenuView.displayMenu(); 
-        } 
+            CrossOffItemMenuView crossOffItemMenuView = new CrossOffItemMenuView(locationPlayer);
+            crossOffItemMenuView.display(); 
+            crossOffItemMenuView.pickUp();            
+        }
        
         public void display16() {
         //Grandma’s House
@@ -496,6 +537,8 @@ class LocationMenuView {
 
         public void display20() {
         //Dark Alley
+        DarkAlley darkAlley = new DarkAlley(locationPlayer);
+        locationPlayer = darkAlley.pickupItem();
         System.out.println(
         "======================================================================");
         System.out.println(
@@ -508,12 +551,15 @@ class LocationMenuView {
         + "\n"
         + "\nCross item off my list!");  
 
-            CrossOffItemMenuView crossOffItemMenuView = new CrossOffItemMenuView();
-            crossOffItemMenuView.displayMenu(); 
-        }  
+            CrossOffItemMenuView crossOffItemMenuView = new CrossOffItemMenuView(locationPlayer);
+            crossOffItemMenuView.display(); 
+            crossOffItemMenuView.pickUp();            
+        } 
         
         public void display21() {
         //Dollar Theatre
+        DollarTheater dollarTheater = new DollarTheater(locationPlayer);
+        locationPlayer = dollarTheater.pickupItem();
         System.out.println(
         "======================================================================");
         System.out.println(
@@ -524,8 +570,9 @@ class LocationMenuView {
         + "\n"
         + "\nCross item off my list!");  
 
-            CrossOffItemMenuView crossOffItemMenuView = new CrossOffItemMenuView();
-            crossOffItemMenuView.displayMenu(); 
+            CrossOffItemMenuView crossOffItemMenuView = new CrossOffItemMenuView(locationPlayer);
+            crossOffItemMenuView.display(); 
+            crossOffItemMenuView.pickUp();            
         }  
         
         public void display22() {
@@ -564,6 +611,8 @@ class LocationMenuView {
         
         public void display24() {
         //Police Station
+        PoliceStation policeStation = new PoliceStation(locationPlayer);
+        locationPlayer = policeStation.pickupItem();
         System.out.println(
         "======================================================================");
         System.out.println(
@@ -574,12 +623,15 @@ class LocationMenuView {
         + "\n"
         + "\nCross item off my list!");  
 
-            CrossOffItemMenuView crossOffItemMenuView = new CrossOffItemMenuView();
-            crossOffItemMenuView.displayMenu(); 
+            CrossOffItemMenuView crossOffItemMenuView = new CrossOffItemMenuView(locationPlayer);
+            crossOffItemMenuView.display(); 
+            crossOffItemMenuView.pickUp();            
         }  
         
         public void display25() {
         //BYUI Computer Lab
+        BYUILab bYUILab = new BYUILab(locationPlayer);
+        locationPlayer = bYUILab.pickupItem();
         System.out.println(
         "======================================================================");
         System.out.println(
@@ -591,9 +643,18 @@ class LocationMenuView {
         + "\n"
         + "\nCross item off my list!");  
 
-            CrossOffItemMenuView crossOffItemMenuView = new CrossOffItemMenuView();
-            crossOffItemMenuView.displayMenu(); 
+            CrossOffItemMenuView crossOffItemMenuView = new CrossOffItemMenuView(locationPlayer);
+            crossOffItemMenuView.display(); 
+            crossOffItemMenuView.pickUp();            
         } 
 
-
+    @Override
+    public boolean doAction(Object obj) {
+        String action = (String) obj;
+        if (action.equalsIgnoreCase("E")) {
+            MainMenuView mainMenuView = new MainMenuView(locationPlayer);
+            mainMenuView.display();
+        }
+        return false;
+    }
     }
