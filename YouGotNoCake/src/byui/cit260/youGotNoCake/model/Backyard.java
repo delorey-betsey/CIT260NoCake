@@ -9,13 +9,42 @@ public class Backyard implements Serializable {
     private Player mmvPlayer;
     private int locationID;
     private String foundItem;
-
+        
     public Backyard(Player player) {
         this.mmvPlayer = player;
         this.locationID = 2;
         this.foundItem = "Tranquilizer Dart";
     }
     
+    public Player pickupItem() {
+        
+        if (!mmvPlayer.hasItem(foundItem)) {
+        
+            for (String cakeIngredient : new CakeIngredients().getCakeIngredientsArray()) {
+                if (cakeIngredient.equalsIgnoreCase(foundItem)) {
+                    mmvPlayer.getFoundCakeIngredients().add(foundItem);
+                }
+            }
+
+            for (String partySupply : new PartySupplies().getPartySuppliesArray()) {
+                if (partySupply.equalsIgnoreCase(foundItem)) {
+                    mmvPlayer.getFoundPartySupplies().add(foundItem);
+                }
+            }
+
+            for (String sleepAid : new SleepAids().getSleepAidsArray()) {
+                if (sleepAid.equals(foundItem)) {
+                    mmvPlayer.getFoundSleepAids().add(foundItem);
+                }
+            }
+        } else {
+            System.out.println("You already have this item.  Choose a new location.");
+        }
+
+        return mmvPlayer;
+    }
+    
+        
     public int getLocationID() {
         return locationID;
     }
@@ -23,26 +52,7 @@ public class Backyard implements Serializable {
     public void setLocationID(int locationID) {
         this.locationID = locationID;
     }
-
-    public Player pickupItem() {
-        for (String cakeIngredient : new CakeIngredients().getCakeIngredientsArray()) {
-            if (cakeIngredient.equalsIgnoreCase(foundItem)) {
-                mmvPlayer.getFoundCakeIngredients().add(foundItem);
-            }
-        }
-        for (String partySupply : new PartySupplies().getPartySuppliesArray()) {
-            if (partySupply.equalsIgnoreCase(foundItem)) {
-                mmvPlayer.getFoundPartySupplies().add(foundItem);
-            }
-        }
-        for (String sleepAid : new SleepAids().getSleepAidsArray()) {
-            if (sleepAid.equals(foundItem)) {
-                mmvPlayer.getFoundSleepAids().add(foundItem);
-            }
-        }
-        return mmvPlayer;
-    }
-            
+    
     @Override
     public int hashCode() {
         int hash = 3;

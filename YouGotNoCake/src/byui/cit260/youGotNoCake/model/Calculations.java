@@ -1,17 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package byui.cit260.youGotNoCake.model;
 
 import java.io.Serializable;
 import java.util.Objects;
 
-/**
- *
- * @author Betsey
- */
 public class Calculations implements Serializable{
     //class-instance variables
     private Number numInput1;
@@ -156,8 +147,5 @@ public class Calculations implements Serializable{
             return false;
         }
         return true;
-    }
-    
-    
-  
+    } 
 }

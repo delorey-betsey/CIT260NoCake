@@ -1,17 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package byui.cit260.youGotNoCake.model;
 
 import java.io.Serializable;
 import java.util.Objects;
 
-/**
- *
- * @author Alyse
- */
 public class Treehouse implements Serializable{
     //class-instance variables
     private Number locationID;
@@ -66,6 +57,5 @@ public class Treehouse implements Serializable{
     public String toString() {
         return "Treehouse{" + "locationID=" + locationID + ", locationText=" + locationText + '}';
     }
-    
     
 }

@@ -1,17 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package byui.cit260.youGotNoCake.model;
 
 import java.io.Serializable;
 import java.util.Objects;
 
-/**
- *
- * @author Betsey
- */
 public class Lists implements Serializable {
     //class instance variables
     private String listName;
@@ -19,8 +10,6 @@ public class Lists implements Serializable {
 
     public Lists() {
     }
-    
-    
 
     public String getListName() {
         return listName;
@@ -42,8 +31,6 @@ public class Lists implements Serializable {
     public String toString() {
         return "Lists{" + "listName=" + listName + ", numItemsFound=" + numItemsFound + '}';
     }
-    
-    
 
     @Override
     public int hashCode() {
@@ -70,7 +57,5 @@ public class Lists implements Serializable {
         }
         return true;
     }
-    
-    
-    
+   
 }

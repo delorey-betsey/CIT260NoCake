@@ -1,4 +1,5 @@
 package byui.cit260.youGotNoCake.view;
+import byui.cit260.youGotNoCake.exception.CalcXmasException;
 import java.util.Scanner;
 
 public class CalcXmasMenuView {
@@ -11,43 +12,43 @@ public class CalcXmasMenuView {
          +"\n-------------------------------------------------------------------";
     
     public void displayMenu() {
-    //TODO 
-        //rewrite message
         
         char selection = ' ';
         
         System.out.println(XMASCALCULATION);  //display the main menu
 
-        int day = this.getDay();   //get the user's day
+        int day = 0;
+        int month = 0;
 
-        int month = this.getMonth();   //get the user's month
-
-        double result = this.calcXmas(day,month);  //calculate days to Xmas based on player input
-        
-//TODO        if (result <=0) {
-//            System.out.println("Silly, you missed it! Date after Christmas.");
-//        } else {
-        System.out.println("\nDays to Christmas 2015:   " 
-        + result  //display the calculated days to Christmas"
-        );
-        System.out.println("Hope you're bein' nice! Continue your quest...");
-        System.out.println(
-       "\n======================================================================");   
-//        }
-}
+        try {
+            day = this.getDay();   //get the user's day
+            month = this.getMonth();   //get the user's month
+            double result = this.calcXmas(day,month);  //calculate days to Xmas based on player input
+            System.out.println("\nDays to Christmas 2015:   " 
+            + result  //display the calculated days to Christmas"
+            );
+            System.out.println("Hope you're bein' nice! Continue your quest...");
+        } catch (CalcXmasException e) {
+            System.out.println("There is an error calculating days to Christmas.");
+            ErrorView.display(this.getClass().getName(), e.getMessage());
+        } finally {
+            System.out.println( "Continue your quest...");  
+            System.out.println("\n======================================================================"); 
+        }
+    }
  
-    private static boolean isInteger(String x) {
+    private static boolean isInteger(String x) throws CalcXmasException{
         try { 
             Integer.parseInt(x); 
         } catch(NumberFormatException | NullPointerException e) { 
-            return false; 
+            throw new CalcXmasException(e.getMessage()); 
         }
         // only got here if we didn't return false
         return true;
     }
     
     
-    private int getDay() {
+    private int getDay()throws CalcXmasException {
 
             boolean valid = false;    //indicates if the choice has been retrieved
             String day = null;
@@ -65,24 +66,23 @@ public class CalcXmasMenuView {
             //then checks to validate input is integer
             //then checks for number selection between 1-25
             //if valid, perform doAction
+            int d = 0;            
             if (day.charAt(0) != 'E'){
                 if (isInteger(day)){
                     //this is creating the new integer variable 'location'
                     //and using a prepackaged function of parseInt from the
                     //the available functions in the Integer class
                     //to see the available functions, type 'Integer.' and hit enter.
-                    int d = Integer.parseInt(day);
-                    if (d > 0 && d < 32){
-                        return d;  //return the valid choice
+                    d = Integer.parseInt(day);
+                    if (d <= 0 || d >= 32){
+                        throw new CalcXmasException("Invalid day.");
                     }  
-                } else {
-                    System.out.println("\n*** Invalid selection *** Try again.");
                 }
             }
-            return -1;// TODO else return user to locations menu;     
+            return d;  //return the valid choice    
         }
     
-    private int getMonth() {
+    private int getMonth()throws CalcXmasException {
 
             boolean valid = false;    //indicates if the choice has been retrieved
             String month = null;
@@ -100,21 +100,20 @@ public class CalcXmasMenuView {
             //then checks to validate input is integer
             //then checks for number selection between 1-25
             //if valid, perform doAction
+            int m = 0;
             if (month.charAt(0) != 'E'){
                 if (isInteger(month)){
                     //this is creating the new integer variable 'location'
                     //and using a prepackaged function of parseInt from the
                     //the available functions in the Integer class
                     //to see the available functions, type 'Integer.' and hit enter.
-                    int m = Integer.parseInt(month);
-                    if (m > 0 && m < 13){
-                        return m;  //return the valid choice
+                    m = Integer.parseInt(month);
+                    if (m <= 0 || m >= 13){
+                        throw new CalcXmasException("Invalid month.");
                     }  
-                } else {
-                    System.out.println("\n*** Invalid selection *** Try again.");
-                }
+                } 
             }
-            return -1;// TODO else return user to locations menu;     
+            return m;  //return the valid choice     
         }
 
     public double calcXmas(int day, int month){

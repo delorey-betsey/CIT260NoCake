@@ -1,17 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package byui.cit260.youGotNoCake.model;
 
 import java.io.Serializable;
 import java.util.Objects;
 
-/**
- *
- * @author Alyse
- */
 public class Barbershop  implements Serializable{
     
     //class-instance variables
@@ -67,7 +58,5 @@ public class Barbershop  implements Serializable{
     @Override
     public String toString() {
         return "Barbershop{" + "locationId=" + locationId + ", locationText=" + locationText + '}';
-    }
-    
-    
+    } 
 }

@@ -1,8 +1,5 @@
 package byui.cit260.youGotNoCake.view;
-/**
- *
- * @author Betsey
- */
+
 public class HelpMenuView extends View {
 
     public HelpMenuView() {

@@ -66,10 +66,6 @@ public class CrossOffItemMenuView extends View {
         return false;
     }
     
-    public void pickUp (){
-        
-    }
-
     private void viewSAList() {
         //get the sorted list of Sleep Aid items for the current game
         String[] salist = new SleepAids().getSleepAidsArray();
@@ -78,6 +74,8 @@ public class CrossOffItemMenuView extends View {
         System.out.println("\nDescription" + "\t\t" + "Found");
         System.out.println();
         
+        // sort ArrayList before processing
+        pickUpPlayer.sortPlayerItems(pickUpPlayer.getFoundSleepAids());
         //for each Sleep Aids list item
         int counter = 0;
         for (String saItem : salist) {
@@ -104,6 +102,8 @@ public class CrossOffItemMenuView extends View {
         System.out.println("\nDescription" + "\t\t" + "Found");
         System.out.println();
         
+        //sort ArrayList before processing
+        pickUpPlayer.sortPlayerItems(pickUpPlayer.getFoundPartySupplies());
         //for each Party Supply list item
         int counter = 0;
         for (String psItem : pslist) {
@@ -130,6 +130,8 @@ public class CrossOffItemMenuView extends View {
         System.out.println("\nDescription" + "\t\t" + "Found");
         System.out.println();
         
+        //sort the list before displaying
+        pickUpPlayer.sortPlayerItems(pickUpPlayer.getFoundCakeIngredients());
         //for each Cake Ingredients list item
         int counter = 0;
         for (String ciItem : cilist) {

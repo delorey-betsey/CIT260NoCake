@@ -1,4 +1,5 @@
 package byui.cit260.youGotNoCake.view;
+import byui.cit260.youGotNoCake.exception.CalcBMIException;
 import java.util.Scanner;
 
 public class CalcBMIMenuView {
@@ -13,36 +14,38 @@ public class CalcBMIMenuView {
         +"\n-------------------------------------------------------------------";
     
     public void displayMenu() {
-    //TODO 
-        //rewrite message
-        
+      
         char selection = ' ';
         
         System.out.println(BMICALCULATION);  //display the main menu
 
-        int height = this.getHeight();   //get the user's height in inches
-
-        int weight = this.getWeight();   //get the user's weight in lbs.
-
-        double result = this.calcBMI(height,weight);  //calculate BMI based on player input
+        int height = 0;
+        int weight = 0;   
         
-        
-
-        System.out.println("\nYour BMI is:     " 
-        + result  //display the calculated BMI"
-        + "\n");
-        System.out.println("Below 18.5         Underweight"
-        + "\n18.5-24.9          Normal or Healthy Weight"
-        + "\n25.0-29.9          Overweight"                
-        + "\n30.0 and Above     Underweight"
-        + "\n");
-        System.out.println("\n A one-hour workout is 4% of your day...NO excuses."  
-                + "\nContinue your quest...");
-        System.out.println(
-       "\n======================================================================");   
-}
+        try {
+            height = this.getHeight();   //get the user's height in inches
+            weight = this.getWeight();   //get the user's weight in lbs.
+            double result = this.calcBMI(height,weight);  //calculate BMI based on player input
+            System.out.println("\nYour BMI is:     " 
+            + result  //display the calculated BMI"
+            + "\n");
+            System.out.println("Below 18.5         Underweight"
+            + "\n18.5-24.9          Normal or Healthy Weight"
+            + "\n25.0-29.9          Overweight"                
+            + "\n30.0 and Above     Underweight"
+            + "\n");
+            System.out.println("\n A one-hour workout is 4% of your day...NO excuses.");
+        } catch (CalcBMIException e) {
+            System.out.println("There is an error calculating BMI.");
+            ErrorView.display(this.getClass().getName(), e.getMessage());
+        } finally {
+            System.out.println( "Continue your quest...");  
+            System.out.println("\n======================================================================"); 
+        }
+    }
  
-    private static boolean isInteger(String x) {
+ 
+    private static boolean isInteger(String x)throws CalcBMIException {
         try { 
             Integer.parseInt(x); 
         } catch(NumberFormatException | NullPointerException e) { 
@@ -52,7 +55,7 @@ public class CalcBMIMenuView {
         return true;
     }
     
-    private int getHeight() {
+    private int getHeight()throws CalcBMIException {
 
             boolean valid = false;    //indicates if the choice has been retrieved
             String height = null;
@@ -70,24 +73,23 @@ public class CalcBMIMenuView {
             //then checks to validate input is integer
             //then checks for number selection between 1-25
             //if valid, perform doAction
+            int h = 0;
             if (height.charAt(0) != 'E'){
                 if (isInteger(height)){
                     //this is creating the new integer variable 'location'
                     //and using a prepackaged function of parseInt from the
                     //the available functions in the Integer class
                     //to see the available functions, type 'Integer.' and hit enter.
-                    int h = Integer.parseInt(height);
-                    if (h > 47 && h < 97){
-                        return h;  //return the valid choice
+                    h = Integer.parseInt(height);
+                    if (h <= 47 || h >= 97){
+                        throw new CalcBMIException("Invalid height.");
                     }  
-                } else {
-                    System.out.println("\n*** Invalid selection *** Try again.");
-                }
+                } 
             }
-            return -1;// TODO else return user to locations menu;     
+            return h;  //return the valid choice     
         }
     
-    private int getWeight() {
+    private int getWeight()throws CalcBMIException {
 
         boolean valid = false;    //indicates if the choice has been retrieved
         String weight = null;
@@ -105,21 +107,20 @@ public class CalcBMIMenuView {
         //then checks to validate input is integer
         //then checks for number selection between 1-25
         //if valid, perform doAction
+        int w = 0;
         if (weight.charAt(0) != 'E'){
             if (isInteger(weight)){
                 //this is creating the new integer variable 'location'
                 //and using a prepackaged function of parseInt from the
                 //the available functions in the Integer class
                 //to see the available functions, type 'Integer.' and hit enter.
-                int w = Integer.parseInt(weight);
-                if (w > 49 && w < 501){
-                    return w;   //return the valid choice
+                w = Integer.parseInt(weight);
+                if (w <= 49 || w >= 501){
+                    throw new CalcBMIException("Invalid weight.");
                 }  
-            } else {
-                System.out.println("\n*** Invalid selection *** Try again.");
-            }
+            } 
         }
-        return -1;    // TODO return to locations menu     
+        return w;  //return the valid choice    
     }
 
     public double calcBMI(int height, int weight){
@@ -132,6 +133,6 @@ public class CalcBMIMenuView {
             result = Math.round(roundoff*100)/100;
             return result;
         }
-    }
+}
 
 
