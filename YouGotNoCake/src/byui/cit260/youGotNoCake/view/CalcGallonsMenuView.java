@@ -27,7 +27,7 @@ public class CalcGallonsMenuView {
             System.out.println ("\nNo wonder it doesn’t smell very good down here.");
         } catch (CalcGallonsException e) {
             System.out.println("There is an error calculating gallons flushed.");
-            ErrorView.display(this.getClass().getName(), e.getMessage());
+            ErrorView.logError(this.getClass().getName(), e.getMessage());
         } finally {
             System.out.println( "Continue your quest...");  
             System.out.println("\n======================================================================"); 

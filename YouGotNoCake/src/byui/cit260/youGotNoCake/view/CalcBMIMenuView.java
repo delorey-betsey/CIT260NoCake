@@ -37,7 +37,7 @@ public class CalcBMIMenuView {
             System.out.println("\n A one-hour workout is 4% of your day...NO excuses.");
         } catch (CalcBMIException e) {
             System.out.println("There is an error calculating BMI.");
-            ErrorView.display(this.getClass().getName(), e.getMessage());
+            ErrorView.logError(this.getClass().getName(), e.getMessage());
         } finally {
             System.out.println( "Continue your quest...");  
             System.out.println("\n======================================================================"); 

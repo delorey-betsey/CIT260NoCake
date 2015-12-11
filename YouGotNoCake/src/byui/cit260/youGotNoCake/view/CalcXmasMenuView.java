@@ -30,7 +30,7 @@ public class CalcXmasMenuView {
             System.out.println("Hope you're bein' nice! Continue your quest...");
         } catch (CalcXmasException e) {
             System.out.println("There is an error calculating days to Christmas.");
-            ErrorView.display(this.getClass().getName(), e.getMessage());
+            ErrorView.logError(this.getClass().getName(), e.getMessage());
         } finally {
             System.out.println( "Continue your quest...");  
             System.out.println("\n======================================================================"); 
@@ -45,8 +45,7 @@ public class CalcXmasMenuView {
         }
         // only got here if we didn't return false
         return true;
-    }
-    
+    }   
     
     private int getDay()throws CalcXmasException {
 
