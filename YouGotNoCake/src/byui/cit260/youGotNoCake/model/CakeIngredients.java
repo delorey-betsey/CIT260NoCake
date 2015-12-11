@@ -11,10 +11,10 @@ public class CakeIngredients implements Serializable{
     private String[] cakeIngredientsArray;
 
     public CakeIngredients() {
-        itemFlour = "Flour";
-        itemSugar = "Sugar";
-        itemButta = "Butta";
-        itemBananas = "Bananas";
+        itemFlour       = "Flour";
+        itemSugar       = "Sugar";
+        itemButta       = "Butta";
+        itemBananas     = "Bananas";
         cakeIngredientsArray = new String[]{this.itemBananas, this.itemButta, this.itemFlour, this.itemSugar};
     }
 

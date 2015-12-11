@@ -4,11 +4,11 @@ import java.io.PrintWriter;
 import yougotnocake.YouGotNoCake;
 
 public class ErrorView {
-    private static final PrintWriter logFile = YouGotNoCake.getOutFile();
-    public static void display (String className, String errorMessage){
-        logFile.println(
-        "________________________________________________"
-        + "\n- ERROR - " + errorMessage + " occurred in " + className
-        + "\n _____________________________________________");
+    public static void logError (String className, String errorMessage){
+        YouGotNoCake.getLogFile().print(
+        "\n________________________________________________"
+        + "\n - ERROR - " + errorMessage + " occurred in " + className
+        + "\n_____________________________________________");
+        YouGotNoCake.getLogFile().flush();
     }
 }

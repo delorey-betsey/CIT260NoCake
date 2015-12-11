@@ -11,10 +11,10 @@ public class SleepAids implements Serializable{
     private String[] sleepAidsArray;
 
     public SleepAids() {
-        itemApneaFairy = "Apnea Fairy";
-        itemTranquilDart = "Tranquilizer Dart";
-        itemTaxCode = "Tax Code";
-        itemWarmMilk = "Warm Milk";
+        itemApneaFairy      = "Apnea Fairy";
+        itemTranquilDart    = "Tranquilizer Dart";
+        itemTaxCode         = "Tax Code";
+        itemWarmMilk        = "Warm Milk";
         sleepAidsArray = new String[]{this.itemApneaFairy, this.itemTaxCode, this.itemTranquilDart, this.itemWarmMilk};
     }
 

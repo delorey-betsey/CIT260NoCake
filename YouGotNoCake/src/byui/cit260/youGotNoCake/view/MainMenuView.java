@@ -1,6 +1,7 @@
 package byui.cit260.youGotNoCake.view;
 
 import byui.cit260.youGotNoCake.model.Player;
+import yougotnocake.YouGotNoCake;
 
 public class MainMenuView extends View {
     
@@ -68,17 +69,18 @@ public class MainMenuView extends View {
     
     private void startExistingGame() {
         //START EXISTING GAME ** ADD LANGUAGE TO GET SAVED GAME
-        System.out.println("*** startExistingGame function called ***");
+        mmvPlayer = YouGotNoCake.startSavedGame();
+        LocationMenuView locationMenu = new LocationMenuView(mmvPlayer);
+        locationMenu.display();
     }
     
     private void displayHelpMenu() {
         //display Help menu
-
         HelpMenuView helpMenu = new HelpMenuView();
         helpMenu.display();
     }
     
     private void saveGame() {
-        System.out.println("*** saveGame function called ***");    
+        YouGotNoCake.saveCurrentGame(mmvPlayer);
     }    
 }
