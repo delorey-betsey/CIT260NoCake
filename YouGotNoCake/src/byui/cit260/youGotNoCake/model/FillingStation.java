@@ -18,8 +18,6 @@ public class FillingStation implements Serializable {
 
     public Player pickupItem() {
         
-        if (!mmvPlayer.hasItem(foundItem)) {
-        
             for (String cakeIngredient : new CakeIngredients().getCakeIngredientsArray()) {
                 if (cakeIngredient.equalsIgnoreCase(foundItem)) {
                     mmvPlayer.getFoundCakeIngredients().add(foundItem);
@@ -31,19 +29,8 @@ public class FillingStation implements Serializable {
                     mmvPlayer.getFoundPartySupplies().add(foundItem);
                 }
             }
-
-            for (String sleepAid : new SleepAids().getSleepAidsArray()) {
-                if (sleepAid.equals(foundItem)) {
-                    mmvPlayer.getFoundSleepAids().add(foundItem);
-                }
-            }
-        } else {
-            System.out.println("You already have this item.  Choose a new location.");
-        }
-
         return mmvPlayer;
-    }
-    
+    }    
         
     public int getLocationID() {
         return locationID;
