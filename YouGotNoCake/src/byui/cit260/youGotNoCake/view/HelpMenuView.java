@@ -1,6 +1,10 @@
 package byui.cit260.youGotNoCake.view;
 
+import byui.cit260.youGotNoCake.model.Player;
+
 public class HelpMenuView extends View {
+    
+    private Player hmvPlayer;
 
     public HelpMenuView() {
         super ("\n"
@@ -13,6 +17,20 @@ public class HelpMenuView extends View {
         +"\nE - Exit"
         +"\n---------------------------------------");
     }
+    
+    public HelpMenuView(Player hmvPlayer) {
+        super ("\n"
+        +"\n---------------------------------------"
+        +"\n    Help Menu"
+        +"\n---------------------------------------"
+        +"\nG - What is the goal of the game?"
+        +"\nM - How to move."
+        +"\nC - Items on shopping lists."
+        +"\nE - Exit"
+        +"\n---------------------------------------");
+        this.hmvPlayer = hmvPlayer;
+    }
+    
     @Override
     public boolean doAction(Object obj){
         String value = (String) obj; 
@@ -29,7 +47,7 @@ public class HelpMenuView extends View {
                 this.displayCrossOff();
                 break;
             case 'E': //exit help menu to main menu
-                MainMenuView mainMenu = new MainMenuView();
+                MainMenuView mainMenu = new MainMenuView(hmvPlayer);
                 mainMenu.display();
             default:
                 System.out.println("\n*** Invalid selection *** Try again.");
