@@ -220,6 +220,7 @@ class LocationMenuView extends View{
             
             Backyard backyard = new Backyard(locationPlayer);
             locationPlayer = backyard.pickupItem();
+            
             WinControl winController = new WinControl(locationPlayer);
             winController.checkForWin();
 

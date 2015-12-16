@@ -18,6 +18,8 @@ public class DollarTheater implements Serializable {
 
     public Player pickupItem() {
         
+        if (!mmvPlayer.hasItem(foundItem)) {
+        
             for (String cakeIngredient : new CakeIngredients().getCakeIngredientsArray()) {
                 if (cakeIngredient.equalsIgnoreCase(foundItem)) {
                     mmvPlayer.getFoundCakeIngredients().add(foundItem);
@@ -29,6 +31,9 @@ public class DollarTheater implements Serializable {
                     mmvPlayer.getFoundPartySupplies().add(foundItem);
                 }
             }
+        } else {
+            System.out.println("You already have this item. Choose new location.");
+        }
         return mmvPlayer;
     }
         

@@ -18,17 +18,21 @@ public class Florist implements Serializable {
 
     public Player pickupItem() {
         
+        if (!mmvPlayer.hasItem(foundItem)) {
+        
             for (String cakeIngredient : new CakeIngredients().getCakeIngredientsArray()) {
                 if (cakeIngredient.equalsIgnoreCase(foundItem)) {
                     mmvPlayer.getFoundCakeIngredients().add(foundItem);
                 }
             }
-
             for (String partySupply : new PartySupplies().getPartySuppliesArray()) {
                 if (partySupply.equalsIgnoreCase(foundItem)) {
                     mmvPlayer.getFoundPartySupplies().add(foundItem);
                 }
             }
+        } else {
+            System.out.println("You already have this item. Choose new location.");
+        }   
         return mmvPlayer;
     }
         
